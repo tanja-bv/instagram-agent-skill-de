@@ -118,6 +118,11 @@ def clamp(n):
     return max(0.0, min(100.0, n))
 
 
+def komma(x, stellen=1, breite=0):
+    """81.4 -> '81,4'. Deutsche Dezimalzahl, auf Wunsch rechtsbündig."""
+    return f"{x:{breite}.{stellen}f}".replace(".", ",")
+
+
 def woerter(text):
     return sprache.woerter(text)
 
@@ -136,7 +141,7 @@ def check_laenge(text):
     if chars > 70:                       # zwei Zeilen großer Bildschirmtext
         score -= 12
     return clamp(score), (f"{n} Silben, {len(woerter(text))} Wörter, {chars} Zeichen, "
-                          f"~{secs:.1f}s gesprochen (Ziel 7-20 Silben)")
+                          f"~{komma(secs)}s gesprochen (Ziel 7-20 Silben)")
 
 
 def check_konkret(text):
@@ -252,10 +257,10 @@ def render_one(text, results, overall, verdict, flags, out=sys.stdout):
     print(f"  \"{text.strip()}\"\n", file=out)
     for name in CHECKS:
         score, detail = results[name]
-        print(f"  {name:<13} {bar(score)} {score:5.1f}", file=out)
+        print(f"  {name:<13} {bar(score)} {komma(score, 1, 5)}", file=out)
         print(f"  {'':<13} {detail}", file=out)
     print("-" * 62, file=out)
-    print(f"  {'HOOK-SCORE':<13} {bar(overall)} {overall:5.1f}   {verdict}", file=out)
+    print(f"  {'HOOK-SCORE':<13} {bar(overall)} {komma(overall, 1, 5)}   {verdict}", file=out)
     for f in flags:
         print(f"\n  K.-O.  {f}", file=out)
     if verdict != "STARK":
@@ -270,7 +275,7 @@ def render_table(rows, out=sys.stdout):
     for i, r in enumerate(rows, 1):
         mark = "->" if i == 1 else "  "
         hook = r["hook"] if len(r["hook"]) <= 60 else r["hook"][:57] + "..."
-        print(f"{mark} {r['score']:5.1f} {r['verdict']:<7} {hook}", file=out)
+        print(f"{mark} {komma(r['score'], 1, 5)} {r['verdict']:<7} {hook}", file=out)
         print(f"        schwächste: {r['weakest']} ({r['checks'][r['weakest']]['score']:.0f})",
               file=out)
         for f in r["flags"]:

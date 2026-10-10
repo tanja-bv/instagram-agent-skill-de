@@ -53,8 +53,8 @@ def scale(value, human, machine):
     return clamp((value - machine) / (human - machine) * 100)
 
 
-def komma(x, stellen=1):
-    return f"{x:.{stellen}f}".replace(".", ",")
+def komma(x, stellen=1, breite=0):
+    return f"{x:{breite}.{stellen}f}".replace(".", ",")
 
 
 def saetze(text):
@@ -192,10 +192,10 @@ def render(results, overall, verdict, label=None, out=sys.stdout):
     print("=" * max(len(title), 62), file=out)
     for name in CHECKS:
         score, detail = results[name]
-        print(f"  {name:<14} {bar(score)} {score:5.1f}", file=out)
+        print(f"  {name:<14} {bar(score)} {komma(score, 1, 5)}", file=out)
         print(f"  {'':<14} {detail}", file=out)
     print("-" * 62, file=out)
-    print(f"  {'MENSCH-SCORE':<14} {bar(overall)} {overall:5.1f}   {verdict}", file=out)
+    print(f"  {'MENSCH-SCORE':<14} {bar(overall)} {komma(overall, 1, 5)}   {verdict}", file=out)
     if verdict != "BESTANDEN":
         weakest = min(CHECKS, key=lambda c: results[c][0])
         print(f"\n  Schwächstes Signal: {weakest}. Das zuerst reparieren.", file=out)

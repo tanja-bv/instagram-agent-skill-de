@@ -98,17 +98,17 @@ So sieht der Hook-Scorer auf deutschen B2B-Hooks aus:
 ```
 HOOK-RANKING
 ==============================================================================
-->  81.4 STARK   Hören Sie auf, Dienstpläne per WhatsApp zu verschicken.
+->  81,4 STARK   Hören Sie auf, Dienstpläne per WhatsApp zu verschicken.
         schwächste: FALLHÖHE (70)
-    79.2 STARK   18.000 € hat uns eine fehlende Klausel im Rahmenvertrag g...
+    79,2 STARK   18.000 € hat uns eine fehlende Klausel im Rahmenvertrag g...
         schwächste: ANSPRACHE (70)
-    30.0 SCHWACH Wenn Sie Ihre Stunden noch auf Zetteln sammeln, hast du e...
+    30,0 SCHWACH Wenn Sie Ihre Stunden noch auf Zetteln sammeln, hast du e...
         schwächste: KONKRET (15)
         K.-O.: du und Sie in einer Zeile. Im B2B der Fehler, der sofort nach Vorlage aussieht.
-    13.2 SCHWACH Wir freuen uns, Ihnen unsere neue Lösung vorzustellen
+    13,2 SCHWACH Wir freuen uns, Ihnen unsere neue Lösung vorzustellen
         schwächste: EINSTIEG (0)
         K.-O.: Firmen-Einstieg. Keiner scrollt, um zu hören, dass Sie sich freuen. ...
-     9.6 SCHWACH Hallo zusammen, heute möchte ich über Zeiterfassung sprechen
+     9,6 SCHWACH Hallo zusammen, heute möchte ich über Zeiterfassung sprechen
         schwächste: EINSTIEG (0)
         K.-O.: Begrüßung. Keiner ist in den Feed gekommen, um begrüßt zu werden.
 ```
