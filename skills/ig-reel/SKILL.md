@@ -1,147 +1,180 @@
 ---
 name: ig-reel
 description: >-
-  Write an Instagram Reel from a raw idea - hook options off 26 formulas, the
-  spoken script, the on-screen text, and a timed beat sheet - in the user's own
-  voice and scored before they shoot it. Use whenever the user wants a Reel, a
-  short-form video script, a hook, a voiceover, "make a reel about X", "what
-  should I say in this video", or is about to record and does not have the
-  first line yet.
+  Schreibt ein Instagram-Reel aus einer rohen Idee: Hook-Optionen aus 26
+  Formeln, das gesprochene Skript, den Bildschirmtext und ein Beat-Sheet mit
+  Zeitmarken, in der Stimme und Anrede des Nutzers und bewertet, bevor gedreht
+  wird. Nutzen, wenn der Nutzer ein Reel will, ein Kurzvideo-Skript, einen
+  Hook oder ein Voiceover, bei "schreib mir ein Reel", "mach ein Reel über X",
+  "Hook für", "was sag ich in dem Video", "Skript für ein Video", oder wenn er
+  gleich aufnimmt und den ersten Satz noch nicht hat.
 ---
 
 # ig-reel
 
-Turns one raw idea into a Reel that somebody finishes.
+Macht aus einer rohen Idee ein Reel, das jemand bis zum Ende schaut.
 
-Two tools live in this folder and they both actually run. Use them. Do not
-eyeball the hook and do not guess at the length.
+Zwei Werkzeuge liegen in diesem Ordner, und beide laufen wirklich. Nutz sie.
+Schätz den Hook nicht nach Gefühl und rate nicht bei der Länge.
 
 ```bash
-python3 hookscore.py hooks.txt              # rank your hook options
-python3 hookscore.py --hook "one line"      # score a single one
-python3 beats.py script.txt --target 30     # timed beat sheet before you shoot
+python3 hookscore.py hooks.txt              # Hook-Optionen ranken
+python3 hookscore.py --hook "eine Zeile"    # eine einzelne bewerten
+python3 beats.py skript.txt --target 30     # Beat-Sheet mit Zeiten, vor dem Dreh
 ```
 
-## Before you write
+Beide teilen sich `sprache.py`: Silben statt Wörter (deutsche Wörter sind
+lang), Zahlen so gezählt, wie man sie sagt ("18.000 €" sind sechs Silben), und
+"konkret" heißt Zahl, Abkürzung, Marke, Monat oder Ort, nicht großgeschrieben.
+Im Deutschen ist jedes Substantiv groß.
 
-1. Read `~/.claude/instagram/voice.md` if it exists. That is the user's voice
-   profile: how they talk on camera, what they never say, who they are talking
-   to. If it does not exist, ask for **three of their own reels**, transcribe or
-   read them, infer the voice, and write the file. A script in the wrong voice
-   is unusable, because they have to say it out loud.
-2. Read `hooks.json` in this folder. 26 formulas, each with a template, a filled
-   example, the on-screen version, what it is for, and how it gets ruined.
-   Four of them are in there because they kept turning up in real hooks, not
-   because they completed a pattern.
-3. If the idea is thin, do not pad it. Ask one batched question: what happened,
-   to whom, and what did it cost or return. A Reel needs one specific true
-   thing. Get it before writing.
-4. If `~/.claude/instagram/swipe.md` exists, read it. `/ig-viral` writes that
-   file, and it is the user's own evidence about which formulas are working in
-   their niche right now. It beats the defaults in this file.
+## Bevor du schreibst
 
-## The shape
+1. Lies `~/.claude/instagram/voice.md`, falls es die Datei gibt. Das ist das
+   Stimmprofil des Nutzers: wie er vor der Kamera spricht, was er nie sagt, mit
+   wem er redet, **ob er duzt oder siezt** und sein Sprechtempo in Silben pro
+   Sekunde. Gibt es die Datei nicht, frag nach **drei eigenen Reels**, lies
+   oder transkribier sie, leite die Stimme ab und schreib die Datei. Ein Skript
+   in der falschen Stimme ist unbrauchbar, weil er es laut sagen muss. Fehlt
+   die Anrede: einmal fragen, ohne Antwort Sie. Nie mischen.
+2. Lies `hooks.json` in diesem Ordner. 26 Formeln, jede mit Vorlage,
+   ausgefülltem Beispiel (bei Formeln mit Ansprache auch `example_sie`),
+   Bildschirmversion, wofür sie gut ist und wie sie kaputtgeht.
+3. Ist die Idee dünn, polster sie nicht. Stell eine gebündelte Frage: Was ist
+   passiert, bei wem, und was hat es gekostet oder gebracht. Ein Reel braucht
+   eine konkrete, wahre Sache. Hol sie, bevor du schreibst.
+4. Gibt es `~/.claude/instagram/swipe.md`, lies es. `/ig-viral` schreibt diese
+   Datei, und sie ist der eigene Beleg des Nutzers, welche Formeln in seiner
+   Branche gerade laufen. Sie schlägt die Standardwerte hier.
 
-A Reel is decided in the first two seconds and kept by the next five.
+## Die Form
 
-```
-0:00 - 0:02   HOOK        the claim. Spoken line and on-screen line, written
-                          separately. Motion in the first frame, not a static face.
-0:02 - 0:07   THE STAKE   why this matters to the person watching. One line.
-0:07 - ...    THE BODY    one idea per beat, and the frame changes every beat.
-LAST 3s       THE PAYOFF  deliver what the hook promised, then the single ask.
-LAST LINE     THE LOOP    echo one word from the hook so the replay lands clean.
-```
-
-Length: 15 to 45 seconds is the working range. Reels run to 3 minutes and
-almost nobody should use it. Under 7 seconds the loop counts inflate and
-nothing else does.
-
-## The loop
-
-**1. Pick three hooks, not one.** Run the idea through `hooks.json`, choose
-three formulas that genuinely fit it, and write the spoken line plus the
-on-screen line for each. Different formulas, not three rewrites of one.
-
-**2. Score them.** Put the three spoken lines in a file, one per line, and run
-`hookscore.py`. Show the user the ranking. If the top one is under 50, you do
-not have the hook yet and no amount of editing fixes that.
-
-**3. Write the script** on the winning hook. Plain spoken language, the way the
-user actually talks. Contractions. Short lines. No sentence they would have to
-rehearse.
-
-**4. Time it.** Run `beats.py script.txt --target {length}`. Fix every flag:
-a hook past 3 seconds, any beat over 4 seconds, a run of beats with nothing
-concrete in them, no loop. Re-run until it is clean.
-
-**5. Humanize it.** Run the script through `/ig-human` before showing it. A
-written-sounding line is obvious the moment someone says it out loud.
-
-**6. Print the block.** The script in a fenced block, the on-screen text as a
-separate list with timings, and then:
+Ein Reel entscheidet sich in den ersten zwei Sekunden und hält in den nächsten fünf.
 
 ```
-REEL READY
-hook:       #3 Nobody Tells You, scored 86 STRONG
-length:     28.4s across 9 beats at 165 wpm
-on-screen:  6 cards
-humanizer:  4 artefacts stripped, human score 81 PASS
-caption:    run /ig-caption next
-
-Reply "yes" to log it, or tell me what to change.
+0:00 - 0:02   HOOK         die Behauptung. Gesprochene Zeile und Bildschirmzeile
+                           getrennt geschrieben. Bewegung im ersten Bild, kein starrer Kopf.
+0:02 - 0:07   FALLHÖHE     warum das den Zuschauer betrifft. Eine Zeile.
+0:07 - ...    HAUPTTEIL    eine Idee pro Beat, und das Bild wechselt mit jedem Beat.
+LETZTE 3s     AUFLÖSUNG    liefern, was der Hook versprochen hat, dann die eine Bitte.
+LETZTE ZEILE  LOOP         ein Wort aus dem Hook wiederholen, damit der Replay sauber landet.
 ```
 
-**7. Never publish.** This skill produces a script. The user shoots it and
-posts it. On "yes", append to `~/.claude/instagram/log.md` with the date, the
-hook formula used and the first line, so `/ig-audit` has a history later.
+Länge: 15 bis 45 Sekunden ist der Arbeitsbereich. Reels laufen bis zu drei
+Minuten, und fast keiner sollte das nutzen. Unter 7 Sekunden steigen die
+Loop-Zahlen, sonst nichts. Im B2B gilt: Ein Geschäftsführer schaut 30 Sekunden
+zu Ende, wenn in Sekunde zwei sein Problem steht. Er schaut keine 60 Sekunden
+Imagefilm.
 
-## On-screen text is a separate script
+## Der Ablauf
 
-Write it separately, every time. It is read before it is heard.
+**1. Drei Hooks, nicht einen.** Lauf mit der Idee durch `hooks.json`, wähl drei
+Formeln, die wirklich passen, und schreib für jede die gesprochene Zeile plus
+die Bildschirmzeile. Drei verschiedene Formeln, nicht drei Umformulierungen
+einer. Nimm `example` oder `example_sie` als Muster, je nach Anrede.
 
-- **Six words or fewer per card.** It is being read at arm's length by someone
-  who is not listening yet.
-- **The hook card is up at frame 1**, not after a beat of silence.
-- **Keep it inside the safe zone.** On a 1080x1920 frame, nothing above y=230
-  or below y=1440, and keep the right 230 pixels clear. The interface sits on
-  top of everything outside that box: the caption, the action rail, the audio
-  strip.
-- **Never put the hook where the caption sits.** That is the bottom of the
-  frame and it is covered.
-- **Burn in captions for the body.** Most people watch muted first.
+**2. Bewerten.** Die drei gesprochenen Zeilen in eine Datei, eine pro Zeile,
+und `hookscore.py` laufen lassen. Zeig dem Nutzer das Ranking. Liegt der beste
+unter 50, gibt es den Hook noch nicht, und kein Feilen ändert das. Ein K.-O.
+(Begrüßung, "In diesem Video", "Wir freuen uns", du/Sie gemischt) wird nicht
+diskutiert, sondern neu geschrieben.
 
-## Rules that make the difference
+**3. Das Skript schreiben**, auf dem Sieger-Hook. Gesprochene Sprache, so wie
+der Nutzer wirklich redet. Kurze Zeilen. Kein Satz, den er üben müsste.
+Fachwörter seiner Kunden ("Objekt", "Dienstplan", "Abnahme") statt
+Marketingdeutsch.
 
-- **One idea per Reel.** If the script has two, you have two Reels. Say so.
-- **Numbers over adjectives.** "$4,200" beats "a lot". If the user has not
-  given a number, ask for one rather than writing around the hole.
-- **Cut the intro.** No greeting, no "in this video", no name, no logo sting.
-  The video starts at the sentence you would normally reach at second six.
-- **Change the frame every beat.** A static shot for 8 seconds is where people
-  leave, and `beats.py` will flag it.
-- **One ask at the end.** Comment a keyword, save it, or follow. One.
-- **Never fabricate.** No invented metrics, clients, revenue or outcomes under
-  the user's name, even as a placeholder. If a number is needed and unknown,
-  leave `{{your number}}` in the script and flag it.
-- **Do not write a script around a trending audio the user cannot use.** If the
-  idea needs the user's own voice, say so.
+**4. Takten.** `beats.py skript.txt --target {Länge} --sps {Tempo aus voice.md}`.
+Jede Markierung beheben: Hook über 3 Sekunden, ein Beat über 4 Sekunden, eine
+Reihe Beats ohne Konkretes, kein Loop, du/Sie gemischt. Neu laufen lassen, bis
+es sauber ist.
 
-## Example
+**5. Humanisieren.** Das Skript durch `/ig-human` schicken, bevor du es zeigst.
+Eine geschrieben klingende Zeile hört man in dem Moment, in dem sie jemand laut
+sagt.
 
-```
-/ig-reel we cut proposal time from 5 hours to 20 minutes with one template
-```
+**6. Den Block ausgeben.** Das Skript in einem Code-Block, den Bildschirmtext
+als eigene Liste mit Zeiten, und dann:
 
 ```
-HOOKS  (scored)
-  86  STRONG  #5  Time Collapse   "Proposals used to take me five hours. Twenty minutes now."
-                                  on screen: 5 HOURS -> 20 MIN
-  71  STRONG  #1  Cost Confession "I billed four hours a week for formatting. For two years."
-                                  on screen: 2 YEARS WASTED
-  54  OK      #9  The Steal       "Steal the proposal template that did it."
-                                  on screen: STEAL THIS
+REEL FERTIG
+Hook:        #5 Zeitraffer, 77,9 STARK
+Länge:       24,2s über 9 Beats bei 4,5 Silben/s
+Bildschirm:  6 Tafeln, Untertitel durchgehend
+Humanizer:   3 Artefakte entfernt, Mensch-Score 74 BESTANDEN
+Anrede:      du, durchgehend
+Caption:     als Nächstes /ig-caption
 
-Shooting #5: the ratio is believable, it reads in one glance on screen,
-and the number is yours.
+Antworte "ja", dann logge ich es, oder sag, was sich ändern soll.
 ```
+
+**7. Nie veröffentlichen.** Dieser Skill liefert ein Skript. Der Nutzer dreht
+und postet. Bei "ja" an `~/.claude/instagram/log.md` anhängen: Datum, genutzte
+Hook-Formel und erste Zeile, damit `/ig-audit` später eine Historie hat.
+
+## Bildschirmtext ist ein eigenes Skript
+
+Schreib ihn getrennt, jedes Mal. Er wird gelesen, bevor er gehört wird.
+
+- **Höchstens sechs Wörter pro Tafel, etwa 20 Zeichen pro Zeile.** Gelesen auf
+  Armlänge von jemandem, der noch nicht zuhört. Lange Komposita von Hand
+  trennen: "Arbeitszeit-/erfassung" statt einer Zeile, die aus dem Bild läuft.
+- **Die Hook-Tafel steht ab Bild 1**, nicht nach einem Beat Stille.
+- **Im sicheren Bereich bleiben.** Auf einem 1080x1920-Bild nichts über y=230
+  oder unter y=1440, und die rechten 230 Pixel frei lassen. Außerhalb dieses
+  Rahmens liegt die Oberfläche über allem: Caption, Aktionsleiste, Audiozeile.
+- **Den Hook nie dorthin, wo die Caption sitzt.** Das ist der untere Bildrand,
+  und der ist verdeckt.
+- **Untertitel für den ganzen Hauptteil einbrennen.** Pflicht, nicht Kür: Viele
+  schauen zuerst ohne Ton, und im B2B schauen viele im Büro.
+- **Umlaute und ß prüfen.** Manche Schriften in Schnitt-Apps haben kein ß oder
+  setzen es in Großbuchstaben falsch. Vor dem Export anschauen.
+
+## Regeln, die den Unterschied machen
+
+- **Eine Idee pro Reel.** Hat das Skript zwei, sind es zwei Reels. Sag das.
+- **Zahlen statt Adjektive.** "4.200 €" schlägt "viel Geld". Hat der Nutzer
+  keine Zahl genannt, frag danach, statt um das Loch herumzuschreiben.
+- **Das Intro streichen.** Keine Begrüßung, kein "In diesem Video", kein Name,
+  kein Logo-Jingle, kein "Wir freuen uns". Das Video beginnt bei dem Satz, den
+  man sonst in Sekunde sechs erreicht.
+- **Mit jedem Beat das Bild wechseln.** Eine starre Einstellung über 8 Sekunden
+  ist die Stelle, an der Leute gehen, und `beats.py` markiert sie.
+- **Eine Bitte am Ende.** Keyword kommentieren, speichern oder folgen. Eine.
+  Im B2B meistens das Keyword, weil es zu einem Gespräch führt.
+- **Nie erfinden.** Keine erfundenen Kennzahlen, Kunden, Umsätze oder
+  Ergebnisse unter dem Namen des Nutzers, auch nicht als Platzhalter. Fehlt
+  eine Zahl, bleibt `{{deine Zahl}}` bzw. `{{Ihre Zahl}}` im Skript stehen, mit
+  Markierung.
+- **Kunden, Mitarbeiter und Kundenobjekte nur mit Einwilligung.** Kundennamen,
+  Logos und Kundenzahlen nur mit schriftlicher Freigabe. Ein Dreh beim Kunden
+  vor Ort braucht dessen Okay, und nichts Sicherheitsrelevantes ins Bild
+  (Schließpläne, Alarmanlagen, Zugangscodes).
+- **Kein Skript um einen Trend-Sound, den der Nutzer nicht nutzen kann.**
+  Unternehmenskonten haben meist nur die lizenzfreie Musikbibliothek. Braucht
+  die Idee die eigene Stimme des Nutzers, sag das.
+- **Rechtliche oder steuerliche Aussagen nur mit Quelle.** Ein B2B-Publikum
+  prüft nach, und ein falscher Satz über Arbeitsrecht kostet mehr Vertrauen,
+  als das Reel je bringt.
+
+## Beispiel
+
+```
+/ig-reel wir haben die Angebotszeit mit einer Vorlage von 5 Stunden auf 20 Minuten gedrückt
+```
+
+```
+HOOK-RANKING
+->  77,9 STARK   #5  Zeitraffer      "Für Angebote haben wir früher fünf Stunden gebraucht. Heute zwanzig Minuten."
+                                     Bildschirm: 5 STD → 20 MIN
+    52,6 OK      -   (frei)          "Vier Stunden pro Woche haben wir für Formatierung verrechnet. Zwei Jahre lang."
+                                     Bildschirm: 2 JAHRE FORMATIERT
+    37,8 SCHWACH #9  Zum Mitnehmen   "Klau dir die Angebotsvorlage, die das geschafft hat."
+                                     Bildschirm: ZUM MITNEHMEN
+```
+
+Gedreht wird #5: Das Verhältnis ist glaubwürdig, es liest sich auf einen Blick
+im Bild, und die Zahl gehört dem Nutzer. `beats.py` meldet danach, dass der
+Hook mit 4,9 Sekunden zu lang ist. Darum wird er geteilt: "Angebote: früher
+fünf Stunden." als Beat 1, "Heute zwanzig Minuten." als Beat 2. Die
+Bildschirmtafel bleibt gleich.

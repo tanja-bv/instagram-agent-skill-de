@@ -1,97 +1,136 @@
 ---
 name: ig-story
 description: >-
-  Write the day's Instagram Stories - the frame-by-frame sequence, which
-  stickers to use where, and the one that moves people into the DMs. Use when
-  the user says "stories", "what do I post on my story", "story sequence",
-  "poll idea", "I have nothing to story about", or wants to sell something
-  without making a post about it.
+  Die Instagram-Stories des Tages schreiben: die Sequenz Frame für Frame,
+  welcher Sticker wohin gehört, und der eine, der Leute in die DMs bringt. Für
+  B2B: Blick hinter die Kulissen, Einsätze vor Ort, Umfragen an Entscheider,
+  Link zu Demo oder Checkliste. Nutzen, wenn der Nutzer sagt "Stories",
+  "Story-Sequenz", "Stories für heute", "was poste ich in die Story",
+  "Umfrage-Idee", "Story-Umfrage", "Frage-Sticker", "Link-Sticker", "hinter
+  die Kulissen", "mir fällt nichts für die Story ein", oder etwas verkaufen
+  will, ohne einen Feed-Post darüber zu machen.
 ---
 
 # ig-story
 
-Stories are not a smaller feed. The feed is how strangers find you. Stories are
-how the people who already follow you decide whether you are a person worth
-buying from, and they are the only surface on Instagram where a tap turns into
-a conversation in one move.
+Stories sind kein kleiner Feed. Über den Feed finden Fremde das Unternehmen.
+Über Stories entscheiden die, die schon folgen, ob das ein Betrieb ist, mit dem
+sie arbeiten wollen. Und es ist die einzige Stelle auf Instagram, an der aus
+einem Tipp mit einem Zug ein Gespräch wird.
 
-Nobody outside your followers sees these, so the job is completely different:
-depth, not reach.
+Außerhalb der Follower sieht das fast niemand. Die Aufgabe ist also eine
+andere: Tiefe, nicht Reichweite. Im B2B ist das ein Vorteil, denn die
+Follower sind die Kunden, Interessenten und Bewerber, um die es geht.
 
-## The daily shape
+## Die Tagesform
 
-Three to seven frames a day. Beyond about seven, the tap-forward rate climbs
-and the last frames play to nobody, which is exactly where people put the ask.
+Drei bis sieben Frames pro Tag, an Werktagen. Ab etwa sieben steigt die
+Weitertipp-Rate, und die letzten Frames laufen ins Leere. Genau dort setzen die
+meisten ihre Bitte hin.
 
 ```
-1       THE OPEN     something happening today, with a face or a hand in it.
-2-3     THE MIDDLE   the actual content: the process, the result, the mistake.
-4       THE ASK      one sticker. Poll, question box, quiz or link.
-5       THE CLOSE    the answer, the outcome, or tomorrow's setup.
+1       DER EINSTIEG   etwas, das heute passiert, mit Gesicht oder Hand im Bild.
+2-3     DIE MITTE      der eigentliche Inhalt: der Ablauf, das Ergebnis, der Fehler.
+4       DIE BITTE      ein Sticker. Umfrage, Fragen, Quiz oder Link.
+5       DER ABSCHLUSS  die Auflösung, das Ergebnis, oder der Aufhänger für morgen.
 ```
 
-Put the ask at frame 4, not frame 7. Completion drops with every tap and the
-ask should be seen by the people who are still there.
+Die Bitte kommt in Frame 4, nicht in Frame 7. Mit jedem Tipp springen Leute
+ab, und die Bitte sollen die sehen, die noch da sind.
 
-## The stickers, and what each is actually for
+## B2B-Sequenzen
 
-| sticker | job | use when |
+Fünf Bausteine, die im B2B tragen. Einer pro Tag reicht, über die Woche
+wechseln.
+
+| Sequenz | was gezeigt wird | Sticker | Achtung |
+| --- | --- | --- | --- |
+| **Blick hinter die Kulissen** | Disposition um 06:30, der Dienstplan für 40 Objekte, die Kalkulation am Schreibtisch, die Materialausgabe. Der Ablauf ist der Proof: Wer zeigt, wie er organisiert ist, muss weniger behaupten. | Umfrage oder Quiz | Bildschirme prüfen: Namen, Telefonnummern, Kundendaten unkenntlich machen |
+| **Einsatz vor Ort** | Vorher, die Arbeit, die Abnahme. Hände und Werkzeug statt Gesichter. | Quiz ("Was ist hier falsch?") | nur mit Freigabe des Kunden. Keine Adresse, kein Firmenschild, keine Sicherheitstechnik |
+| **Umfrage an Entscheider** | eine Frage aus dem Alltag der Zielgruppe, zwei klare Antworten: "Dienstplan bei Ihnen: Excel / Software", "Wer kontrolliert bei Ihnen die Reinigung? Objektleitung / Eigentlich niemand" | Umfrage | so formulieren, dass sich ein Inhaber in einer Antwort wiederfindet, ohne sich zu blamieren |
+| **Frage-Sticker** | "Was wollten Sie bei einer Ausschreibung schon immer fragen?" Die Antworten am nächsten Tag beantworten, eine pro Frame. | Fragen | geteilte Antworten zeigen keinen Absender, Firmennamen im Text trotzdem schwärzen |
+| **Link zu Demo oder Checkliste** | drei Frames Kontext, dann der Link. Der Link-Text sagt, was kommt: "Checkliste Ausschreibung (PDF)", "Demo in 15 Minuten", nicht "Hier klicken". | Link | eine Zielseite, die genau das liefert, ohne Umweg über die Startseite |
+
+**Recht am eigenen Bild.** Mitarbeitende, Kunden und Kundenobjekte nur mit
+Einwilligung zeigen, bei Mitarbeitenden schriftlich, und sie können sie
+widerrufen. Bei Kundenobjekten braucht es die Freigabe des Kunden, die des
+Objektleiters vor Ort reicht nicht. Im Sicherheitsdienst und bei IT-Kunden zusätzlich nichts
+zeigen, was Abläufe verrät: Kamerapositionen, Zugänge, Rundgangszeiten,
+Serverschränke. Keine Rechtsberatung, aber die sichere Seite.
+
+## Die Sticker, und wofür sie wirklich da sind
+
+| Sticker | Aufgabe | wann |
 | --- | --- | --- |
-| **Poll** | the cheapest tap there is | you want volume of response, not information |
-| **Question box** | harvesting the exact words people use | you need content ideas or objections, verbatim |
-| **Quiz** | teaching by letting them be wrong | there is a common misconception in the niche |
-| **Slider** | vibe check | nothing important. Fun, low value |
-| **Link** | the only clickable surface besides the bio | there is somewhere real to go |
-| **Countdown** | a deadline people can subscribe to | a launch, a live, a close date |
-| **Add yours** | reach beyond your followers, occasionally | the prompt is one anyone in the niche can answer |
+| **Umfrage** | der billigste Tipp, den es gibt | es geht um viele Reaktionen, nicht um Information |
+| **Fragen** | sammelt die genauen Worte der Zielgruppe | es fehlen Content-Ideen oder Einwände im O-Ton |
+| **Quiz** | lehrt, indem man falsch liegen darf | in der Branche hält sich ein verbreiteter Irrtum |
+| **Emoji-Slider** | Stimmungsbild | nichts Wichtiges. Locker, wenig Wert |
+| **Link** | die einzige klickbare Fläche außer der Bio | es gibt ein echtes Ziel: Demo, Termin, Checkliste |
+| **Countdown** | eine Frist, an die man sich erinnern lassen kann | ein Webinar, ein Messetermin, ein Bewerbungsschluss |
+| **Du bist dran** (Add Yours) | ab und zu Reichweite über die Follower hinaus | die Frage kann jeder in der Branche beantworten |
 
-The question box is the most undervalued one in the list. Every answer is a
-caption, a Reel hook or a DM opener written in the audience's own words. Feed
-them to `/ig-reel` as formula #16.
+Der Frage-Sticker ist der am meisten unterschätzte in der Liste. Jede Antwort
+ist eine Caption, ein Reel-Hook oder ein DM-Einstieg, geschrieben in den Worten
+der Zielgruppe. Gib sie an `/ig-reel` als Formel #16 (Die O-Ton-Frage). Im B2B
+sind das oft genau die Fragen, die sonst erst im Erstgespräch kommen.
 
-## Rules
+## Regeln
 
-- **A face or a hand in the first frame.** Text on a coloured background gets
-  tapped through, and the first frame decides whether the rest get watched.
-- **One idea per frame.** Reading a paragraph on a story is not a thing anyone
-  does.
-- **Keep text inside the middle.** On 1080x1920, nothing above y=250 or below
-  y=1600. The profile row sits on top and the reply bar sits underneath.
-- **Talk to one person.** "You" singular. Stories are the closest thing to a
-  DM that is not one.
-- **Do not repost your own feed post to stories with no comment.** It is the
-  single most ignored frame on the platform. If you are pointing at a post, say
-  what happened in the comments and why it is worth going back for.
-- **Sell on stories, not in posts.** Three frames of context, one frame of
-  offer, one frame of proof. That sequence sells more than a feed post about
-  the same thing and costs you no reach.
+- **Gesicht oder Hand im ersten Frame.** Text auf farbigem Hintergrund wird
+  weggetippt, und der erste Frame entscheidet, ob der Rest gesehen wird.
+- **Eine Idee pro Frame.** Einen Absatz in einer Story liest niemand.
+- **Text in die Mitte.** Bei 1080x1920 nichts oberhalb von y=250 oder
+  unterhalb von y=1600. Oben liegt die Profilzeile, unten das Antwortfeld.
+- **Untertitel immer.** Viele schauen im Büro ohne Ton. Wer spricht, bekommt
+  Text auf den Frame. Unternehmenskonten haben meist nur die lizenzfreie
+  Musikbibliothek, also keine Trend-Sounds einplanen.
+- **Eine Person ansprechen.** Sie oder du im Singular, nach `voice.md`, und nie
+  gemischt. Nicht "liebe Community". Stories sind das, was einer DM am nächsten
+  kommt, ohne eine zu sein.
+- **Den eigenen Feed-Post nicht kommentarlos in die Story teilen.** Das ist der
+  am meisten ignorierte Frame der Plattform. Wer auf einen Post zeigt, sagt
+  dazu, was in den Kommentaren passiert ist und warum sich der Weg zurück
+  lohnt.
+- **In Stories verkaufen, nicht in Posts.** Drei Frames Kontext, ein Frame
+  Angebot, ein Frame Proof. Proof heißt: freigegebenes Kundenergebnis oder
+  anonymisiert als Branche, Größe, Ergebnis. Diese Folge verkauft mehr als ein
+  Feed-Post zum selben Thema und kostet keine Reichweite.
 
-## The DM funnel, done honestly
+## Der DM-Funnel, ehrlich gemacht
 
-The sequence that works: a story that names a problem, a question box or a poll
-that lets people say "that's me", and then a reply to each person who answered.
-The conversation starts because they spoke first.
+Die Folge, die funktioniert: eine Story, die ein Problem benennt, eine Umfrage
+oder ein Frage-Sticker, mit dem Leute sagen können "das bin ich", und dann eine
+Antwort an jede Person, die reagiert hat. Das Gespräch beginnt, weil sie zuerst
+etwas gesagt haben.
 
-Automated keyword DM replies are a real, supported feature for professional
-accounts, through Instagram's own tools and approved partners. Bulk DMing
-people who did not interact is not, and it is what gets accounts restricted.
-The rule is simple: **they act first, then you reply.**
+Automatische Keyword-Antworten in DMs sind für professionelle Konten eine
+echte, unterstützte Funktion, über Instagrams eigene Tools und zugelassene
+Partner. Massen-DMs an Leute, die nicht interagiert haben, sind es nicht. Damit
+werden Konten eingeschränkt, und in DE und AT gilt eine werbende Kalt-Nachricht
+ohne Einwilligung schnell als unzulässige Werbung (UWG bzw. TKG; keine
+Rechtsberatung). Die Regel ist einfach: **Erst melden sie sich, dann
+antwortet der Nutzer.** Und die erste Antwort enthält keinen Pitch, sondern
+eine Frage zum Fall. Das Angebot kommt, wenn danach gefragt wird. Die DMs
+schreibt `/ig-dm`.
 
-## Output
+## Ausgabe
 
-The frames in order, each with what is on screen, what is said, and which
-sticker, plus what to do with the answers:
+Die Frames in Reihenfolge, jeweils mit dem, was zu sehen ist, was gesagt wird
+und welcher Sticker, dazu, was mit den Antworten passiert:
 
 ```
-STORIES  ·  Tuesday  ·  5 frames
+STORIES  ·  DI  ·  5 Frames  ·  Anrede: Sie
 
-1  [selfie, walking]      "Third refund request this year. Same reason."
-2  [screen recording]     the clause, highlighted
-3  [talking]              "Approval is a feeling. Delivery is a date."
-4  [poll]                 "Have you been burned by a late approval?"  Yes / Not yet
-5  [text on photo]        "Reply and I will send you the clause."
+1  [Hand, Werkbank]         "Dritter Serverausfall bei Kunden dieses Jahr. Gleiche Ursache."
+2  [Foto, Nahaufnahme]      die ausgebaute USV-Batterie, Aufkleber: Einbau 2019
+3  [Sprechen, Untertitel]   "'Läuft doch' ist kein Prüfprotokoll."
+4  [Umfrage]                "Wann wurde Ihre USV zuletzt geprüft?"  Dieses Jahr / Keine Ahnung
+5  [Text auf Foto]          "Antworten Sie auf diese Story, dann schicken wir Ihnen die Prüfliste."
 
-After: everyone who votes Yes gets a reply. That is the whole funnel.
+Danach: Jede Person, die "Keine Ahnung" stimmt, bekommt eine Antwort: eine
+Frage zum Betrieb, kein Angebot. Wer auf Frame 5 antwortet, bekommt die
+Prüfliste. Das ist der ganze Funnel.
 ```
 
-Nothing is posted. The user posts it.
+Nichts wird gepostet. Der Nutzer postet selbst.

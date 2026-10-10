@@ -1,119 +1,163 @@
 ---
 name: ig-caption
 description: >-
-  Write the Instagram caption - the line that survives the "... more" cut, the
-  body, the single ask, the search terms and the three hashtags - and lint it
-  before it goes out. Use when the user says "write the caption", "caption this",
-  "what do I put in the description", has a reel or a carousel ready and needs
-  the text, or asks about hashtags.
+  Schreibt die Instagram-Caption: die Zeile, die den "... mehr"-Schnitt
+  überlebt, den Text, die eine Bitte, die Suchbegriffe und bis zu fünf
+  Hashtags, und prüft sie, bevor sie rausgeht, inklusive du/Sie-Mix. Nutzen
+  bei "schreib die Caption", "Caption für", "Bildunterschrift", "Beitragstext",
+  "was schreib ich in die Beschreibung", wenn ein Reel oder Karussell fertig ist
+  und der Text fehlt, oder bei Fragen zu Hashtags.
 ---
 
 # ig-caption
 
-One tool lives in this folder and it runs:
+Ein Werkzeug liegt in diesem Ordner, und es läuft:
 
 ```bash
 python3 caption.py caption.txt
-python3 caption.py caption.txt --keywords "client proposals,agency pricing"
+python3 caption.py caption.txt --keywords "gebäudereinigung wien,dienstplan app"
 ```
 
-It prints the caption the way the feed prints it: the first 125 characters in a
-box, everything else behind the tap. Read that box before you read anything
-else you wrote.
+Es druckt die Caption so, wie der Feed sie druckt: die ersten 125 Zeichen in
+einem Kasten, alles andere hinter dem Tippen. Lies diesen Kasten, bevor du
+irgendetwas anderes liest, das du geschrieben hast.
 
-## First, decide which job this caption has
+## Zuerst: Welchen Fall hat diese Caption?
 
-This is the decision that ruins captions when it is skipped.
+Das ist die Entscheidung, an der Captions kaputtgehen, wenn sie übersprungen wird.
 
-**Job A: the video already hooked them.** A Reel carries its own hook in the
-first two seconds, spoken and on screen. The caption is not a second hook and
-competing with the video is how you lose both. Its job is the ask, the context
-that makes the ask make sense, and the words people search.
+**Fall A (Video trägt den Hook).** Ein Reel hat seinen eigenen Hook in den
+ersten zwei Sekunden, gesprochen und im Bild. Die Caption ist kein zweiter
+Hook, und mit dem Video zu konkurrieren ist der Weg, beides zu verlieren. Ihre
+Aufgabe: die Bitte, der Zusammenhang, der die Bitte sinnvoll macht, und die
+Wörter, nach denen Leute suchen.
 
-**Job B: the caption is the content.** A photo, a single image, a carousel
-cover that opens a loop. Here line one is the hook and it works exactly like a
-Reel hook: concrete, short, and cut off at a cliff rather than mid-clause.
+**Fall B (Hook in der Caption).** Ein Foto, ein Einzelbild, ein
+Karussell-Cover, das eine Frage aufmacht. Hier ist Zeile eins der Hook, und sie
+funktioniert genau wie ein Reel-Hook: konkret, kurz, und abgeschnitten an
+einer Kante statt mitten im Nebensatz.
 
-Ask which one you are writing. If the user has a Reel with a strong hook,
-write A and say why.
+Frag, welchen Fall du schreibst. Hat der Nutzer ein Reel mit starkem Hook,
+schreib Fall A und sag warum.
 
-## The shape
+## Die Form
 
 ```
-Line 1      125 characters of visible space. Job A: the ask, plainly.
-            Job B: the hook.
-            Never a greeting, never a hashtag, never an emoji as the first
-            character.
-Body        short paragraphs, one line of white space between each. Two to six
-            of them. This is where the search terms live.
-The ask     one. Comment a keyword, save it, or DM. One.
-Hashtags    up to five, on their own line at the bottom, or none.
+Zeile 1   125 Zeichen sichtbarer Platz. Fall A: die Bitte, schlicht.
+          Fall B: der Hook.
+          Nie eine Begrüßung, nie "Wir freuen uns", nie ein Hashtag, nie ein
+          Emoji als erstes Zeichen.
+Text      kurze Absätze, je eine Leerzeile dazwischen. Zwei bis sechs Stück.
+          Hier stehen die Suchbegriffe.
+Bitte     eine. Keyword kommentieren, speichern oder DM. Eine.
+Hashtags  bis zu fünf, in einer eigenen Zeile ganz unten, oder keine.
 ```
 
-Limit is 2,200 characters and almost nothing needs 2,200. A caption that earns
-the tap and then delivers 600 characters beats one that delivers 1,800.
+Deutsche Sätze sind länger als englische. Plan das Ende des ersten Gedankens
+bei 100 bis 110 Zeichen, nicht bei 125. Die Grenze liegt bei 2.200 Zeichen,
+und fast nichts braucht 2.200. Eine Caption, die das Tippen verdient und dann
+600 Zeichen liefert, schlägt eine mit 1.800.
 
-## Hashtags, honestly
+## Anrede
 
-Hashtags are not a reach lever any more, and the platform has now said so with
-a product change. **Instagram capped hashtags at five per post on 18 December
-2025**, down from thirty, telling creators that "using fewer (up to 5) more
-targeted hashtags, rather than many generic ones" performs better. Adam Mosseri
-had already said in February 2025 that hashtags do not work to increase reach
-and are a label, not a distribution lever.
+Eine Anrede, durchgehend, aus `~/.claude/instagram/voice.md`. Fehlt sie:
+einmal fragen, ohne Antwort Sie. `caption.py` zählt du-Formen und Sie-Formen
+und gibt FEHLER, sobald beide vorkommen. Das ist der häufigste Fehler in
+deutschen B2B-Captions, und er passiert fast immer an derselben Stelle: Der
+Text siezt, und der CTA am Ende duzt ("Folge uns für mehr").
 
-So: up to five, specific, as topic labels. If the user has a block of twenty
-saved in their notes app, that block is now dead weight and the linter will
-fail it.
+## Hashtags, ehrlich
 
-`#viral`, `#fyp`, `#explorepage`, `#foryou` describe nothing. Cut them.
+Hashtags sind kein Reichweitenhebel mehr, und die Plattform hat das inzwischen
+mit einer Produktänderung gesagt. **Instagram hat Hashtags am 18. Dezember 2025
+auf fünf pro Post begrenzt**, vorher dreißig, mit dem Hinweis, dass wenige
+gezielte Hashtags besser laufen als viele allgemeine. Adam Mosseri hatte schon
+im Februar 2025 gesagt, dass Hashtags keine Reichweite bringen, sondern ein
+Etikett sind.
 
-## Search terms matter more than hashtags now
+Also: bis zu fünf, spezifisch, als Themenetikett. Umlaute funktionieren
+(#gebäudereinigung). Hat der Nutzer einen Block mit zwanzig Tags in seinen
+Notizen, ist der jetzt Ballast, und der Linter lässt ihn durchfallen.
 
-Instagram search reads the caption text. So the phrase the user wants to be
-found for goes in the caption as a phrase a human would type, in a sentence
-that reads normally. "Client proposals" as words in line three, not
-"#clientproposals" in a block at the bottom.
+`#viral`, `#fyp`, `#explorepage`, `#erfolg`, `#business` beschreiben nichts.
+Streichen.
 
-Ask for two or three of those terms, then pass them to the linter:
+## Suchbegriffe zählen mehr als Hashtags
+
+Die Instagram-Suche liest den Caption-Text. Der Begriff, unter dem der Nutzer
+gefunden werden will, gehört also als Wortfolge in die Caption, so wie ein
+Mensch sie tippt, in einem Satz, der normal klingt. Im B2B heißt das fast
+immer Leistung plus Region: "Gebäudereinigung in Wien" als Worte in Zeile
+drei, nicht "#gebäudereinigungwien" in einem Block unten.
+
+Frag nach zwei oder drei solcher Begriffe und gib sie dem Linter:
 
 ```bash
-python3 caption.py draft.txt --keywords "client proposals,agency pricing"
+python3 caption.py entwurf.txt --keywords "gebäudereinigung wien,unterhaltsreinigung"
 ```
 
-## Rules
+## Regeln
 
-- **No link in the caption.** Captions are not clickable. A URL in the body is
-  dead text that says "I do not use this platform". Bio or DM.
-- **One ask.** Two asks is the same as none. `caption.py` counts them.
-- **The keyword ask needs a keyword people can type.** One word, no spaces, no
-  emoji, and say it out loud in the video too. `Comment CONTRACT` works.
-  `Comment "the contract guide"` does not.
-- **Write the first comment separately** if there is a link. Say so in the
-  receipt.
-- **Emoji as punctuation, not decoration.** The linter flags anything over
-  4 per 100 characters.
-- **Alt text is worth 20 seconds.** For carousels and photos, write it. It is
-  read by screen readers and by Instagram.
+- **Kein Link in der Caption.** Captions sind nicht klickbar. Eine URL im Text
+  ist toter Text, der sagt "ich nutze diese Plattform nicht". Bio oder DM.
+- **Eine Bitte.** Zwei Bitten sind so gut wie keine. `caption.py` zählt sie.
+  "Kommentieren Sie VERTRAG, dann schicken wir Ihnen die Vorlage per DM" ist
+  eine Bitte: Die DM ist die Auslieferung.
+- **Das Keyword muss sich tippen lassen.** Ein Wort, keine Leerzeichen, kein
+  Emoji, und im Video auch laut sagen. `Kommentiere VORLAGE` funktioniert.
+  `Kommentiere "die Angebotsvorlage für Reinigungsfirmen"` nicht. Umlaute im
+  Keyword vermeiden, manche tippen "ae".
+- **Den ersten Kommentar getrennt schreiben**, wenn es einen Link gibt. Im
+  Beleg erwähnen.
+- **Emoji als Satzzeichen, nicht als Deko.** Der Linter meldet alles über 4
+  pro 100 Zeichen.
+- **Alt-Text ist 20 Sekunden wert.** Für Karussells und Fotos schreiben. Er
+  wird von Screenreadern gelesen und von Instagram.
+- **Bezahlte Kooperation kennzeichnen.** Gibt es Geld oder eine Gegenleistung,
+  gehört "Werbung" bzw. "Anzeige" in die erste Zeile und das Branded-Content-Tool
+  von Instagram dazu. Keine Rechtsberatung, aber das ist der übliche Mindeststandard.
+- **Kundennamen und @-Erwähnungen von Kunden nur mit Freigabe.**
 
-## The loop
+## Der Ablauf
 
-1. Decide Job A or Job B and say which.
-2. Draft it.
-3. Run `/ig-human` on it. Captions are short, so slop is louder here than
-   anywhere else in the pack.
-4. Run `caption.py` with the user's search terms. Fix every FAIL. Decide on
-   every WARN out loud rather than silently.
-5. Print the copy-ready block, then the receipt:
+1. Fall A oder Fall B entscheiden und sagen, welcher.
+2. Entwerfen.
+3. `/ig-human` darüber laufen lassen. Captions sind kurz, darum fallen
+   Floskeln hier lauter auf als irgendwo sonst im Paket.
+4. `caption.py` mit den Suchbegriffen des Nutzers laufen lassen. Jedes FEHLER
+   beheben. Über jedes WARN laut entscheiden, nicht stillschweigend.
+5. Den kopierfertigen Block ausgeben, dann den Beleg:
 
 ```
-CAPTION READY
-job:        A - the reel carries the hook
-visible:    118 of 125 characters used before the cut
-ask:        one, comment CONTRACT
-hashtags:   3
-search:     "client proposals" in line 3, "agency pricing" in line 5
-linter:     READY
+CAPTION FERTIG
+Fall:        A - das Reel trägt den Hook
+sichtbar:    108 von 125 Zeichen vor dem Schnitt genutzt
+Bitte:       eine, VERTRAG kommentieren
+Anrede:      Sie, durchgehend
+Hashtags:    3
+Suche:       "rahmenvertrag" in Zeile 1, "gebäudereinigung wien" in Zeile 4
+Linter:      FERTIG
 ```
 
-Nothing is posted. The user pastes it.
+So sieht eine echte Prüfung aus (gekürzt):
+
+```
+  WAS DER FEED ZEIGT
+  +------------------------------------------------------+
+  | 18.000 € hat uns eine fehlende Klausel gekostet.     |
+  | Seitdem steht in jedem Rahmenvertrag derselbe Satz,  |
+  | und Sie sollten ihn kenn                             |
+  +-------------------------------------------- ... mehr +
+
+  OK     LÄNGE         348 / 2200 Zeichen
+  WARN   ERSTE ZEILE   128 Zeichen, wird bei 125 mitten im Gedanken geschnitten. ...
+  OK     HOOK KONKRET  1 Zahl(en) oder Name(n) im sichtbaren Fenster
+  OK     EIN CTA       eine Handlungsaufforderung: Keyword kommentieren
+  OK     ANREDE        durchgehend Sie
+  WARN   SUCHBEGRIFFE  1/2 vorhanden, 1 im sichtbaren Fenster. Fehlt: gebäudereinigung wien
+```
+
+Die erste Zeile endet hier drei Zeichen zu spät. Kürzen, bis "kennen" vor dem
+Schnitt steht, oder den Satz so bauen, dass der Schnitt eine Kante ist.
+
+Nichts wird gepostet. Der Nutzer fügt es ein.

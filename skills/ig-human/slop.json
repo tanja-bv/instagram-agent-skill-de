@@ -1,1025 +1,1278 @@
 {
-  "version": "1.0",
-  "note": "Lexicon used by humanize.py and detect.py. Replacements are plain-English and keep the sentence grammatical. The last block of each list is Instagram-specific: caption and voiceover slop that does not show up on other platforms. Edit freely - it is meant to be yours.",
+  "version": "1.0-de",
+  "note": "Lexikon für humanize.py und detect.py, deutsch und für B2B. 'replace' mit Text wird automatisch ersetzt, 'replace': null wird nur gemeldet (mit 'hint' als Vorschlag), weil Deutsch beugt und das Verb an Position zwei steht: Ein Wort am Satzanfang zu löschen dreht die Wortstellung um, und ein Substantiv zu tauschen zieht Artikel und Kasus mit. Automatisch ersetzt wird nur, wo der Ersatz dieselbe Satzposition füllt. 'flex': 'adj' übernimmt die Adjektivendung. 'match' ist ein eigener Regex (ohne Groß/Klein), sonst wird 'find' als Wortfolge gesucht. Die Familie 'werbedeutsch' ist der B2B-Teil, 'instagram' sind Caption- und Voiceover-Floskeln. Bearbeite es ruhig, es soll deins sein.",
   "invisible": [
     {
       "cp": "U+200B",
-      "name": "ZERO WIDTH SPACE",
+      "name": "NULLBREITES LEERZEICHEN",
       "action": "delete"
     },
     {
       "cp": "U+200C",
-      "name": "ZERO WIDTH NON-JOINER",
+      "name": "NULLBREITER NICHTVERBINDER",
       "action": "delete"
     },
     {
       "cp": "U+200D",
-      "name": "ZERO WIDTH JOINER",
+      "name": "NULLBREITER VERBINDER",
       "action": "delete"
     },
     {
       "cp": "U+2060",
-      "name": "WORD JOINER",
+      "name": "WORTVERBINDER",
       "action": "delete"
     },
     {
       "cp": "U+FEFF",
-      "name": "ZERO WIDTH NO-BREAK SPACE / BOM",
+      "name": "NULLBREITES GESCHÜTZTES LEERZEICHEN / BOM",
       "action": "delete"
     },
     {
       "cp": "U+00AD",
-      "name": "SOFT HYPHEN",
+      "name": "WEICHES TRENNZEICHEN",
       "action": "delete"
     },
     {
       "cp": "U+180E",
-      "name": "MONGOLIAN VOWEL SEPARATOR",
+      "name": "MONGOLISCHER VOKALTRENNER",
       "action": "delete"
     },
     {
       "cp": "U+061C",
-      "name": "ARABIC LETTER MARK",
+      "name": "ARABISCHE BUCHSTABENMARKE",
       "action": "delete"
     },
     {
       "cp": "U+200E",
-      "name": "LEFT-TO-RIGHT MARK",
+      "name": "LINKS-NACH-RECHTS-MARKE",
       "action": "delete"
     },
     {
       "cp": "U+200F",
-      "name": "RIGHT-TO-LEFT MARK",
+      "name": "RECHTS-NACH-LINKS-MARKE",
       "action": "delete"
     },
     {
       "cp": "U+E0000-U+E007F",
-      "name": "TAG CHARACTERS (invisible ASCII smuggling)",
+      "name": "TAG-ZEICHEN (unsichtbar eingeschmuggeltes ASCII)",
       "action": "delete"
     },
     {
       "cp": "U+00A0",
-      "name": "NO-BREAK SPACE",
+      "name": "GESCHÜTZTES LEERZEICHEN",
       "action": "space"
     },
     {
       "cp": "U+202F",
-      "name": "NARROW NO-BREAK SPACE",
+      "name": "SCHMALES GESCHÜTZTES LEERZEICHEN",
       "action": "space"
     },
     {
       "cp": "U+2009",
-      "name": "THIN SPACE",
+      "name": "SCHMALES LEERZEICHEN",
       "action": "space"
     },
     {
       "cp": "U+2007",
-      "name": "FIGURE SPACE",
+      "name": "ZIFFERNLEERZEICHEN",
       "action": "space"
     },
     {
       "cp": "U+2003",
-      "name": "EM SPACE",
+      "name": "GEVIERTLEERZEICHEN",
       "action": "space"
     },
     {
       "cp": "U+2002",
-      "name": "EN SPACE",
+      "name": "HALBGEVIERTLEERZEICHEN",
       "action": "space"
     },
     {
       "cp": "U+2063",
-      "name": "INVISIBLE SEPARATOR",
+      "name": "UNSICHTBARES TRENNZEICHEN",
       "action": "delete"
     }
   ],
   "typographic": [
     {
       "from": "—",
-      "name": "EM DASH",
+      "name": "GEVIERTSTRICH (EM DASH)",
+      "to": ", "
+    },
+    {
+      "from": "―",
+      "name": "HORIZONTALER STRICH",
       "to": ", "
     },
     {
       "from": "–",
-      "name": "EN DASH",
+      "name": "HALBGEVIERTSTRICH",
       "to": "-"
     },
     {
-      "from": "‘",
-      "name": "LEFT SINGLE QUOTE",
-      "to": "'"
-    },
-    {
-      "from": "’",
-      "name": "RIGHT SINGLE QUOTE",
-      "to": "'"
+      "from": "‒",
+      "name": "ZIFFERNSTRICH",
+      "to": "-"
     },
     {
       "from": "“",
-      "name": "LEFT DOUBLE QUOTE",
+      "name": "ANFÜHRUNGSZEICHEN “",
       "to": "\""
     },
     {
       "from": "”",
-      "name": "RIGHT DOUBLE QUOTE",
+      "name": "ENGLISCHES SCHLUSSZEICHEN ”",
       "to": "\""
     },
     {
-      "from": "…",
-      "name": "HORIZONTAL ELLIPSIS",
-      "to": "..."
+      "from": "„",
+      "name": "DEUTSCHES ANFÜHRUNGSZEICHEN „",
+      "to": "\""
     },
     {
-      "from": "′",
-      "name": "PRIME",
+      "from": "‘",
+      "name": "EINFACHES ANFÜHRUNGSZEICHEN ‘",
       "to": "'"
     },
     {
-      "from": "·",
-      "name": "MIDDLE DOT",
-      "to": "-"
+      "from": "’",
+      "name": "APOSTROPH ’",
+      "to": "'"
+    },
+    {
+      "from": "‚",
+      "name": "EINFACHES DEUTSCHES ANFÜHRUNGSZEICHEN ‚",
+      "to": "'"
+    },
+    {
+      "from": "…",
+      "name": "AUSLASSUNGSPUNKTE",
+      "to": "..."
     },
     {
       "from": "•",
-      "name": "BULLET",
+      "name": "AUFZÄHLUNGSPUNKT",
       "to": "-"
-    },
-    {
-      "from": "→",
-      "name": "RIGHTWARDS ARROW",
-      "to": "->"
     }
   ],
   "words": [
     {
-      "find": "delve into",
-      "replace": "look at",
-      "family": "verbs"
+      "find": "darüber hinaus",
+      "replace": "außerdem",
+      "family": "konnektoren"
     },
     {
-      "find": "delve",
-      "replace": "look",
-      "family": "verbs"
+      "find": "des Weiteren",
+      "replace": "außerdem",
+      "family": "konnektoren"
     },
     {
-      "find": "dive deep into",
-      "replace": "get into",
-      "family": "verbs"
+      "find": "nichtsdestotrotz",
+      "replace": "trotzdem",
+      "family": "konnektoren"
     },
     {
-      "find": "deep dive",
-      "replace": "breakdown",
-      "family": "nouns"
+      "find": "nichtsdestoweniger",
+      "replace": "trotzdem",
+      "family": "konnektoren"
     },
     {
-      "find": "leverage",
-      "replace": "use",
-      "family": "verbs"
+      "find": "letztendlich",
+      "replace": "am Ende",
+      "family": "konnektoren"
     },
     {
-      "find": "leveraging",
-      "replace": "using",
-      "family": "verbs"
+      "find": "letzten Endes",
+      "replace": "am Ende",
+      "family": "konnektoren"
     },
     {
-      "find": "utilize",
-      "replace": "use",
-      "family": "verbs"
+      "find": "im Endeffekt",
+      "replace": "am Ende",
+      "family": "konnektoren"
     },
     {
-      "find": "utilizing",
-      "replace": "using",
-      "family": "verbs"
+      "find": "zweifellos",
+      "replace": "sicher",
+      "family": "konnektoren"
     },
     {
-      "find": "harness",
-      "replace": "use",
-      "family": "verbs"
+      "find": "zweifelsohne",
+      "replace": "sicher",
+      "family": "konnektoren"
     },
     {
-      "find": "embark on",
-      "replace": "start",
-      "family": "verbs"
+      "find": "ohne Zweifel",
+      "replace": "sicher",
+      "family": "konnektoren"
     },
     {
-      "find": "foster",
-      "replace": "build",
-      "family": "verbs"
+      "find": "folglich",
+      "replace": "also",
+      "family": "konnektoren"
     },
     {
-      "find": "facilitate",
-      "replace": "help",
-      "family": "verbs"
+      "find": "demzufolge",
+      "replace": "deshalb",
+      "family": "konnektoren"
     },
     {
-      "find": "showcase",
-      "replace": "show",
-      "family": "verbs"
+      "find": "infolgedessen",
+      "replace": "deshalb",
+      "family": "konnektoren"
     },
     {
-      "find": "unlock",
-      "replace": "get",
-      "family": "verbs"
+      "find": "insbesondere",
+      "replace": "vor allem",
+      "family": "konnektoren"
     },
     {
-      "find": "elevate",
-      "replace": "improve",
-      "family": "verbs"
+      "find": "diesbezüglich",
+      "replace": "dazu",
+      "family": "konnektoren"
     },
     {
-      "find": "streamline",
-      "replace": "simplify",
-      "family": "verbs"
+      "find": "mithilfe von",
+      "replace": "mit",
+      "family": "konnektoren"
     },
     {
-      "find": "spearhead",
-      "replace": "lead",
-      "family": "verbs"
+      "find": "mit Hilfe von",
+      "replace": "mit",
+      "family": "konnektoren"
     },
     {
-      "find": "underscore",
-      "replace": "show",
-      "family": "verbs"
+      "find": "im Grunde genommen",
+      "replace": "im Grunde",
+      "family": "konnektoren"
     },
     {
-      "find": "underscores",
-      "replace": "shows",
-      "family": "verbs"
+      "find": "selbstverständlich",
+      "replace": "natürlich",
+      "family": "konnektoren"
     },
     {
-      "find": "cultivate",
-      "replace": "build",
-      "family": "verbs"
+      "find": "schlussendlich",
+      "replace": "am Ende",
+      "family": "konnektoren"
     },
     {
-      "find": "amplify",
-      "replace": "boost",
-      "family": "verbs"
+      "find": "in erster Linie",
+      "replace": "vor allem",
+      "family": "konnektoren"
     },
     {
-      "find": "curate",
-      "replace": "pick",
-      "family": "verbs"
+      "find": "hinsichtlich",
+      "replace": null,
+      "family": "konnektoren",
+      "hint": "Präposition mit Genitiv. Meist reicht 'bei' oder 'zu', Satz dafür umbauen."
     },
     {
-      "find": "curated",
-      "replace": "picked",
-      "family": "verbs"
+      "find": "im Hinblick auf",
+      "replace": null,
+      "family": "konnektoren",
+      "hint": "Meist reicht 'bei' oder 'für'."
     },
     {
-      "find": "empower",
-      "replace": "let",
-      "family": "verbs"
+      "find": "in Bezug auf",
+      "replace": null,
+      "family": "konnektoren",
+      "hint": "Meist reicht 'bei', 'zu' oder 'für'."
     },
     {
-      "find": "revolutionize",
-      "replace": "change",
-      "family": "verbs"
+      "find": "im Rahmen",
+      "replace": null,
+      "family": "konnektoren",
+      "hint": "Fast immer streichbar: 'im Rahmen des Projekts' heißt 'im Projekt'."
     },
     {
-      "find": "transformative",
-      "replace": "big",
-      "family": "adjectives"
+      "find": "tatsächlich",
+      "replace": null,
+      "family": "konnektoren",
+      "hint": "Sprachmodelle betonen damit, was keiner bezweifelt hat. Meist streichen."
+    },
+    {
+      "find": "grundlegend",
+      "replace": null,
+      "family": "konnektoren",
+      "hint": "Was genau ändert sich? Das statt 'grundlegend'."
+    },
+    {
+      "find": "entscheidend",
+      "replace": null,
+      "family": "konnektoren",
+      "hint": "Entscheidend wofür? Sag das Ergebnis statt der Wichtigkeit."
+    },
+    {
+      "find": "maßgeblich",
+      "replace": null,
+      "family": "konnektoren",
+      "hint": "Durch eine Zahl oder ein 'stark' ersetzen."
+    },
+    {
+      "find": "nahtlos",
+      "replace": "reibungslos",
+      "family": "adjektive",
+      "flex": "adj"
+    },
+    {
+      "find": "maßgeschneidert",
+      "replace": "passend",
+      "family": "adjektive",
+      "flex": "adj"
+    },
+    {
+      "find": "ganzheitlich",
+      "replace": "vollständig",
+      "family": "adjektive",
+      "flex": "adj"
+    },
+    {
+      "find": "innovativ",
+      "replace": "neu",
+      "family": "adjektive",
+      "flex": "adj"
+    },
+    {
+      "find": "revolutionär",
+      "replace": "neu",
+      "family": "adjektive",
+      "flex": "adj"
+    },
+    {
+      "find": "bahnbrechend",
+      "replace": "neu",
+      "family": "adjektive",
+      "flex": "adj"
+    },
+    {
+      "find": "essenziell",
+      "replace": "wichtig",
+      "family": "adjektive",
+      "flex": "adj"
+    },
+    {
+      "find": "essentiell",
+      "replace": "wichtig",
+      "family": "adjektive",
+      "flex": "adj"
+    },
+    {
+      "find": "unerlässlich",
+      "replace": "nötig",
+      "family": "adjektive",
+      "flex": "adj"
+    },
+    {
+      "find": "unverzichtbar",
+      "replace": "nötig",
+      "family": "adjektive",
+      "flex": "adj"
+    },
+    {
+      "find": "optimal",
+      "replace": "gut",
+      "family": "adjektive",
+      "flex": "adj"
+    },
+    {
+      "find": "zahlreich",
+      "replace": "viel",
+      "family": "adjektive",
+      "flex": "adj"
+    },
+    {
+      "find": "erstklassig",
+      "replace": "gut",
+      "family": "adjektive",
+      "flex": "adj"
+    },
+    {
+      "find": "herausragend",
+      "replace": "gut",
+      "family": "adjektive",
+      "flex": "adj"
+    },
+    {
+      "find": "vielfältig",
+      "replace": null,
+      "family": "adjektive",
+      "flex": "adj",
+      "hint": "Zähl auf, was es ist, statt zu sagen, dass es viel ist."
+    },
+    {
+      "find": "facettenreich",
+      "replace": null,
+      "family": "adjektive",
+      "flex": "adj",
+      "hint": "Nenn eine Facette."
     },
     {
       "find": "robust",
-      "replace": "solid",
-      "family": "adjectives"
+      "replace": null,
+      "family": "adjektive",
+      "flex": "adj",
+      "hint": "Was hält es aus? Das sagen."
     },
     {
-      "find": "seamless",
-      "replace": "clean",
-      "family": "adjectives"
+      "find": "effizient",
+      "replace": null,
+      "family": "adjektive",
+      "flex": "adj",
+      "hint": "Im B2B ok, wenn eine Zahl dabei steht: wie viel schneller?"
     },
     {
-      "find": "seamlessly",
-      "replace": "cleanly",
-      "family": "adjectives"
+      "find": "effektiv",
+      "replace": null,
+      "family": "adjektive",
+      "flex": "adj",
+      "hint": "Wirkt wobei? Ergebnis nennen."
     },
     {
-      "find": "pivotal",
-      "replace": "key",
-      "family": "adjectives"
+      "find": "spannend",
+      "replace": null,
+      "family": "adjektive",
+      "flex": "adj",
+      "hint": "Sprachmodell-Lieblingswort. Sag, was daran neu oder überraschend ist."
     },
     {
-      "find": "crucial",
-      "replace": "important",
-      "family": "adjectives"
+      "find": "wertvoll",
+      "replace": null,
+      "family": "adjektive",
+      "flex": "adj",
+      "hint": "'Wertvolle Tipps' verspricht, was der Text beweisen müsste. Streichen."
     },
     {
-      "find": "vital",
-      "replace": "important",
-      "family": "adjectives"
+      "find": "umfassend",
+      "replace": null,
+      "family": "adjektive",
+      "flex": "adj",
+      "hint": "Was genau ist enthalten? Aufzählen oder streichen."
     },
     {
-      "find": "comprehensive",
-      "replace": "complete",
-      "family": "adjectives"
+      "find": "hochwertig",
+      "replace": null,
+      "family": "adjektive",
+      "flex": "adj",
+      "hint": "Woran sieht man das? Material, Garantie, Zahl."
     },
     {
-      "find": "cutting-edge",
-      "replace": "new",
-      "family": "adjectives"
+      "find": "professionell",
+      "replace": null,
+      "family": "adjektive",
+      "flex": "adj",
+      "hint": "Selbstlob, das jeder Wettbewerber auch schreibt. Beleg statt Adjektiv."
     },
     {
-      "find": "game-changing",
-      "replace": "big",
-      "family": "adjectives"
+      "find": "kompetent",
+      "replace": null,
+      "family": "adjektive",
+      "flex": "adj",
+      "hint": "Selbstlob. Jahre, Projekte, Kunden statt Adjektiv."
     },
     {
-      "find": "game-changer",
-      "replace": "big deal",
-      "family": "nouns"
+      "find": "zuverlässig",
+      "replace": null,
+      "family": "adjektive",
+      "flex": "adj",
+      "hint": "Selbstlob. Eine Quote oder ein Beispiel statt Adjektiv."
     },
     {
-      "find": "groundbreaking",
-      "replace": "new",
-      "family": "adjectives"
+      "find": "individuell",
+      "replace": null,
+      "family": "adjektive",
+      "flex": "adj",
+      "hint": "'Individuelle Lösungen' sagt jeder. Was passt ihr konkret an?"
     },
     {
-      "find": "unparalleled",
-      "replace": "unmatched",
-      "family": "adjectives"
+      "find": "einzigartig",
+      "replace": null,
+      "family": "adjektive",
+      "flex": "adj",
+      "hint": "Was genau kann nur das? Sonst streichen."
     },
     {
-      "find": "invaluable",
-      "replace": "useful",
-      "family": "adjectives"
+      "find": "nachhaltig",
+      "replace": null,
+      "family": "adjektive",
+      "flex": "adj",
+      "hint": "Messbar? Dann die Zahl. Sonst streichen."
     },
     {
-      "find": "meticulous",
-      "replace": "careful",
-      "family": "adjectives"
+      "find": "skalierbar",
+      "replace": null,
+      "family": "adjektive",
+      "flex": "adj",
+      "hint": "Von wie vielen auf wie viele? Zahl nennen."
     },
     {
-      "find": "meticulously",
-      "replace": "carefully",
-      "family": "adjectives"
+      "find": "zukunftssicher",
+      "replace": null,
+      "family": "adjektive",
+      "flex": "adj",
+      "hint": "Sicher wogegen? Konkret werden oder streichen."
     },
     {
-      "find": "myriad of",
-      "replace": "many",
-      "family": "adjectives"
+      "find": "zukunftsweisend",
+      "replace": null,
+      "family": "adjektive",
+      "flex": "adj",
+      "hint": "Streichen. Zeig, was es heute kann."
     },
     {
-      "find": "myriad",
-      "replace": "many",
-      "family": "adjectives"
+      "find": "leistungsstark",
+      "replace": null,
+      "family": "adjektive",
+      "flex": "adj",
+      "hint": "Leistung woran gemessen? Zahl oder streichen."
     },
     {
-      "find": "multifaceted",
-      "replace": "complicated",
-      "family": "adjectives"
+      "find": "intuitiv",
+      "replace": null,
+      "family": "adjektive",
+      "flex": "adj",
+      "hint": "'Intuitiv' sagt jede Software. Wie lange dauert die Einarbeitung?"
     },
     {
-      "find": "holistic",
-      "replace": "whole",
-      "family": "adjectives"
+      "find": "benutzerfreundlich",
+      "replace": null,
+      "family": "adjektive",
+      "flex": "adj",
+      "hint": "Wie lange dauert die Einarbeitung? Das statt des Adjektivs."
     },
     {
-      "find": "bespoke",
-      "replace": "custom",
-      "family": "adjectives"
+      "find": "transparent",
+      "replace": null,
+      "family": "adjektive",
+      "flex": "adj",
+      "hint": "Was genau sieht der Kunde? Das sagen."
     },
     {
-      "find": "innovative",
-      "replace": "new",
-      "family": "adjectives"
+      "find": "agil",
+      "replace": null,
+      "family": "adjektive",
+      "flex": "adj",
+      "hint": "Im Fließtext fast immer Füllwort."
     },
     {
-      "find": "profound",
-      "replace": "big",
-      "family": "adjectives"
+      "find": "dynamisch",
+      "replace": null,
+      "family": "adjektive",
+      "flex": "adj",
+      "hint": "Füllwort. Streichen."
     },
     {
-      "find": "remarkable",
-      "replace": "notable",
-      "family": "adjectives"
+      "find": "kundenorientiert",
+      "replace": null,
+      "family": "adjektive",
+      "flex": "adj",
+      "hint": "Jeder ist das, sagt er. Beleg statt Adjektiv."
     },
     {
-      "find": "compelling",
-      "replace": "convincing",
-      "family": "adjectives"
+      "find": "kundenzentriert",
+      "replace": null,
+      "family": "adjektive",
+      "flex": "adj",
+      "hint": "Jeder ist das, sagt er. Beleg statt Adjektiv."
     },
     {
-      "find": "tapestry",
-      "replace": "mix",
-      "family": "nouns"
+      "find": "Mehrwert",
+      "replace": null,
+      "family": "substantive",
+      "hint": "Sag, was genau besser wird: Zeit, Geld, weniger Fehler."
     },
     {
-      "find": "realm",
-      "replace": "world",
-      "family": "nouns"
+      "find": "Synergie",
+      "replace": null,
+      "family": "substantive",
+      "hint": "Streichen und sagen, wer was beiträgt."
     },
     {
-      "find": "landscape",
-      "replace": "market",
-      "family": "nouns"
+      "find": "Gamechanger",
+      "replace": null,
+      "family": "substantive",
+      "hint": "Sag, was sich ändert, mit Zahl."
     },
     {
-      "find": "journey",
-      "replace": "process",
-      "family": "nouns"
+      "find": "Game Changer",
+      "replace": null,
+      "family": "substantive",
+      "hint": "Sag, was sich ändert, mit Zahl."
     },
     {
-      "find": "testament to",
-      "replace": "proof of",
-      "family": "nouns"
+      "find": "Game-Changer",
+      "replace": null,
+      "family": "substantive",
+      "hint": "Sag, was sich ändert, mit Zahl."
     },
     {
-      "find": "cornerstone",
-      "replace": "base",
-      "family": "nouns"
+      "find": "Meilenstein",
+      "replace": null,
+      "family": "substantive",
+      "hint": "Was genau ist passiert? Datum und Zahl."
     },
     {
-      "find": "beacon",
-      "replace": "signal",
-      "family": "nouns"
+      "find": "Herzstück",
+      "replace": null,
+      "family": "substantive",
+      "hint": "Streichen. Nenn das Ding beim Namen."
     },
     {
-      "find": "paradigm",
-      "replace": "model",
-      "family": "nouns"
+      "find": "Erfolgsrezept",
+      "replace": null,
+      "family": "substantive",
+      "hint": "Streichen und das Rezept liefern."
     },
     {
-      "find": "synergy",
-      "replace": "overlap",
-      "family": "nouns"
+      "find": "Erfolgsgeheimnis",
+      "replace": null,
+      "family": "substantive",
+      "hint": "Streichen und das Geheimnis liefern."
     },
     {
-      "find": "ecosystem",
-      "replace": "system",
-      "family": "nouns"
+      "find": "Transformation",
+      "replace": null,
+      "family": "substantive",
+      "hint": "Was wurde wovon zu was? Vorher/Nachher statt Begriff."
     },
     {
-      "find": "treasure trove",
-      "replace": "pile",
-      "family": "nouns"
+      "find": "Lösungen",
+      "replace": null,
+      "family": "substantive",
+      "hint": "'Lösungen' ohne Problem davor ist Werbedeutsch. Das Problem nennen."
     },
     {
-      "find": "plethora of",
-      "replace": "lots of",
-      "family": "nouns"
+      "find": "Best Practice",
+      "replace": null,
+      "family": "substantive",
+      "hint": "Die Praxis beschreiben statt sie 'best' zu nennen."
     },
     {
-      "find": "plethora",
-      "replace": "lots",
-      "family": "nouns"
+      "find": "Best Practices",
+      "replace": null,
+      "family": "substantive",
+      "hint": "Die Praxis beschreiben statt sie 'best' zu nennen."
     },
     {
-      "find": "arsenal",
-      "replace": "set",
-      "family": "nouns"
+      "find": "Learnings",
+      "replace": null,
+      "family": "substantive",
+      "hint": "'Was wir gelernt haben' oder direkt die Lektion."
     },
     {
-      "find": "north star",
-      "replace": "goal",
-      "family": "nouns"
+      "find": "Benefits",
+      "replace": null,
+      "family": "substantive",
+      "hint": "Vorteile, oder besser: der eine Vorteil, konkret."
     },
     {
-      "find": "moreover",
-      "replace": "also",
-      "family": "connectives"
+      "find": "Pain Points",
+      "replace": null,
+      "family": "substantive",
+      "hint": "Das Problem in den Worten des Kunden."
     },
     {
-      "find": "furthermore",
-      "replace": "also",
-      "family": "connectives"
+      "find": "Mindset",
+      "replace": null,
+      "family": "substantive",
+      "hint": "Was genau denkt oder tut man anders?"
     },
     {
-      "find": "additionally",
-      "replace": "also",
-      "family": "connectives"
+      "find": "Takeaways",
+      "replace": null,
+      "family": "substantive",
+      "hint": "Direkt die Lektion schreiben."
     },
     {
-      "find": "nevertheless",
-      "replace": "still",
-      "family": "connectives"
+      "find": "Key Takeaways",
+      "replace": null,
+      "family": "substantive",
+      "hint": "Direkt die Lektion schreiben."
     },
     {
-      "find": "consequently",
-      "replace": "so",
-      "family": "connectives"
+      "find": "Deep Dive",
+      "replace": null,
+      "family": "substantive",
+      "hint": "Einfach anfangen, ohne Ankündigung."
     },
     {
-      "find": "thus",
-      "replace": "so",
-      "family": "connectives"
+      "find": "Win-win",
+      "replace": null,
+      "family": "substantive",
+      "hint": "Wer gewinnt was? Beides konkret."
     },
     {
-      "find": "hence",
-      "replace": "so",
-      "family": "connectives"
+      "find": "Must-have",
+      "replace": null,
+      "family": "substantive",
+      "hint": "Warum genau braucht man es?"
     },
     {
-      "find": "notably",
-      "replace": "",
-      "family": "connectives"
+      "find": "Customer Journey",
+      "replace": null,
+      "family": "substantive",
+      "hint": "Im Instagram-Text fast immer Fachjargon. Den Schritt beim Kunden beschreiben."
     },
     {
-      "find": "importantly",
-      "replace": "",
-      "family": "connectives"
+      "find": "Rundum-sorglos-Paket",
+      "replace": null,
+      "family": "substantive",
+      "hint": "Was ist drin? Aufzählen."
     },
     {
-      "find": "ultimately",
-      "replace": "in the end",
-      "family": "connectives"
+      "find": "Komplettlösung",
+      "replace": null,
+      "family": "substantive",
+      "hint": "Was ist drin? Aufzählen."
     },
     {
-      "find": "in essence",
-      "replace": "basically",
-      "family": "connectives"
+      "find": "Mehrwerte",
+      "replace": null,
+      "family": "substantive",
+      "hint": "Sag, was genau besser wird."
     },
     {
-      "find": "in conclusion",
-      "replace": "so",
-      "family": "connectives"
+      "find": "eintauchen",
+      "replace": null,
+      "family": "verben",
+      "match": "\\beintauch\\w*|\\btauch\\w* (?:wir|sie|ihr|du) (?:\\w+ )?ein\\b",
+      "hint": "Einfach anfangen. 'Tauchen wir ein' ist das bekannteste KI-Deutsch."
     },
     {
-      "find": "when it comes to",
-      "replace": "with",
-      "family": "connectives"
+      "find": "revolutionieren",
+      "replace": null,
+      "family": "verben",
+      "match": "\\brevolutionier\\w*",
+      "hint": "Was ändert sich genau? Vorher/Nachher."
     },
     {
-      "find": "in order to",
-      "replace": "to",
-      "family": "connectives"
+      "find": "transformieren",
+      "replace": null,
+      "family": "verben",
+      "match": "\\btransformier\\w*",
+      "hint": "Vorher/Nachher statt Verb."
     },
     {
-      "find": "a wide range of",
-      "replace": "many",
-      "family": "connectives"
+      "find": "optimieren",
+      "replace": null,
+      "family": "verben",
+      "match": "\\boptimier\\w*",
+      "hint": "Was wird wie viel besser? Zahl."
     },
     {
-      "find": "it is worth noting that",
-      "replace": "note that",
-      "family": "connectives"
+      "find": "maximieren",
+      "replace": null,
+      "family": "verben",
+      "match": "\\bmaximier\\w*",
+      "hint": "Auf welchen Wert? Zahl."
     },
     {
-      "find": "supercharge",
-      "replace": "speed up",
-      "family": "verbs"
+      "find": "ermöglichen",
+      "replace": null,
+      "family": "verben",
+      "match": "\\bermöglich\\w*",
+      "hint": "'Ermöglicht es Ihnen' heißt 'Sie können'. Aktiv schreiben."
     },
     {
-      "find": "skyrocket",
-      "replace": "raise",
-      "family": "verbs"
+      "find": "entfesseln",
+      "replace": null,
+      "family": "verben",
+      "match": "\\bentfessel\\w*",
+      "hint": "Pathos. Streichen."
     },
     {
-      "find": "unleash",
-      "replace": "release",
-      "family": "verbs"
+      "find": "Potenzial entfalten",
+      "replace": null,
+      "family": "verben",
+      "match": "\\bpotenzial\\w* (?:\\w+ )?(?:entfalten|ausschöpfen|freisetzen|heben|nutzen)\\b|\\b(?:volle|ganze) potenzial\\b",
+      "hint": "Welches Ergebnis genau?"
     },
     {
-      "find": "effortlessly",
-      "replace": "easily",
-      "family": "adjectives"
+      "find": "beleuchten",
+      "replace": null,
+      "family": "verben",
+      "match": "\\bbeleucht\\w*",
+      "hint": "'Beleuchten wir' ist Aufsatzdeutsch. Sag es einfach."
     },
     {
-      "find": "captivating",
-      "replace": "interesting",
-      "family": "adjectives"
+      "find": "navigieren",
+      "replace": null,
+      "family": "verben",
+      "match": "\\bnavigier\\w*",
+      "hint": "Außerhalb von Karten fast immer KI-Deutsch ('durch Herausforderungen navigieren')."
     },
     {
-      "find": "stunning",
-      "replace": "good",
-      "family": "adjectives"
+      "find": "Herausforderungen meistern",
+      "replace": null,
+      "family": "verben",
+      "match": "\\bherausforderung\\w* (?:\\w+ )?(?:meistern|bewältigen|begegnen)\\b",
+      "hint": "Welche Herausforderung? Beim Namen nennen."
     },
     {
-      "find": "breathtaking",
-      "replace": "striking",
-      "family": "adjectives"
+      "find": "vorantreiben",
+      "replace": null,
+      "family": "verben",
+      "match": "\\bvoran(?:treib|getrieb|trieb)\\w*|\\btreib\\w* (?:\\w+ ){0,3}voran\\b",
+      "hint": "Wer tut was bis wann?"
     },
     {
-      "find": "iconic",
-      "replace": "known",
-      "family": "adjectives"
-    },
-    {
-      "find": "must-have",
-      "replace": "worth having",
-      "family": "adjectives"
-    },
-    {
-      "find": "no-brainer",
-      "replace": "obvious",
-      "family": "nouns"
-    },
-    {
-      "find": "hidden gem",
-      "replace": "good one",
-      "family": "nouns"
-    },
-    {
-      "find": "secret sauce",
-      "replace": "the actual method",
-      "family": "nouns"
-    },
-    {
-      "find": "ultimate guide",
-      "replace": "guide",
-      "family": "nouns"
-    },
-    {
-      "find": "level up",
-      "replace": "improve",
-      "family": "verbs"
-    },
-    {
-      "find": "hack",
-      "replace": "trick",
-      "family": "nouns"
+      "find": "auf das nächste Level",
+      "replace": null,
+      "family": "verben",
+      "match": "\\bauf (?:das|ein) (?:nächste[ns]?|neue[ns]?|höhere[ns]?) level\\b|\\bnext level\\b",
+      "hint": "Was genau ist danach anders?"
     }
   ],
   "phrases": [
     {
-      "find": "in today's fast-paced world",
-      "replace": "right now",
-      "family": "openers"
+      "find": "In der heutigen schnelllebigen Welt",
+      "replace": "heute",
+      "family": "einstiege",
+      "match": "\\bin der heutigen,? schnelllebigen (?:welt|zeit)\\b"
     },
     {
-      "find": "in today's digital age",
-      "replace": "right now",
-      "family": "openers"
+      "find": "In der heutigen digitalen Welt",
+      "replace": "heute",
+      "family": "einstiege",
+      "match": "\\bin der heutigen,? digitalen (?:welt|zeit)\\b"
     },
     {
-      "find": "in the ever-evolving landscape of",
-      "replace": "in",
-      "family": "openers"
+      "find": "In der heutigen Zeit",
+      "replace": "heute",
+      "family": "einstiege",
+      "match": "\\bin der heutigen zeit\\b"
     },
     {
-      "find": "in the ever-changing world of",
-      "replace": "in",
-      "family": "openers"
+      "find": "In der heutigen Welt",
+      "replace": "heute",
+      "family": "einstiege",
+      "match": "\\bin der heutigen welt\\b"
     },
     {
-      "find": "let's face it",
+      "find": "In Zeiten der Digitalisierung",
+      "replace": "heute",
+      "family": "einstiege",
+      "match": "\\bin zeiten (?:der|von) digitalisierung\\b"
+    },
+    {
+      "find": "Im digitalen Zeitalter",
+      "replace": "heute",
+      "family": "einstiege",
+      "match": "\\bim digitalen zeitalter\\b"
+    },
+    {
+      "find": "In einer Welt, in der",
+      "replace": null,
+      "family": "einstiege",
+      "match": "\\bin einer welt,? in der\\b",
+      "hint": "Streichen und mit der Aussage anfangen."
+    },
+    {
+      "find": "Tauchen wir ein.",
       "replace": "",
-      "family": "openers"
+      "family": "einstiege",
+      "match": "\\btauchen wir (?:gemeinsam |direkt |also )?ein\\s*[.!:]"
     },
     {
-      "find": "here's the thing",
+      "find": "Lass uns eintauchen.",
       "replace": "",
-      "family": "openers"
+      "family": "einstiege",
+      "match": "\\blass(?:t)? uns (?:gemeinsam |direkt )?(?:mal )?eintauchen\\s*[.!:]"
     },
     {
-      "find": "picture this",
+      "find": "Lassen Sie uns eintauchen.",
       "replace": "",
-      "family": "openers"
+      "family": "einstiege",
+      "match": "\\blassen sie uns (?:gemeinsam |direkt )?eintauchen\\s*[.!:]"
     },
     {
-      "find": "imagine a world where",
-      "replace": "imagine if",
-      "family": "openers"
-    },
-    {
-      "find": "it's no secret that",
+      "find": "Seien wir ehrlich:",
       "replace": "",
-      "family": "openers"
+      "family": "einstiege",
+      "match": "\\bseien wir (?:mal )?ehrlich\\s*[:,]\\s*"
     },
     {
-      "find": "we've all been there",
+      "find": "Hand aufs Herz:",
       "replace": "",
-      "family": "openers"
+      "family": "einstiege",
+      "match": "\\bhand aufs herz\\s*[:,]\\s*"
     },
     {
-      "find": "let that sink in",
+      "find": "Spoiler:",
       "replace": "",
-      "family": "closers"
+      "family": "einstiege",
+      "match": "\\bspoiler(?: alert)?\\s*:\\s*"
     },
     {
-      "find": "the choice is yours",
+      "find": "Kurz gesagt:",
       "replace": "",
-      "family": "closers"
+      "family": "einstiege",
+      "match": "(?m)^\\s*kurz gesagt\\s*:\\s*"
     },
     {
-      "find": "food for thought",
+      "find": "Fakt ist:",
       "replace": "",
-      "family": "closers"
+      "family": "einstiege",
+      "match": "\\bfakt ist\\s*:\\s*"
     },
     {
-      "find": "the future is here",
+      "find": "Die Wahrheit ist:",
       "replace": "",
-      "family": "closers"
+      "family": "einstiege",
+      "match": "\\bdie (?:bittere |unbequeme )?wahrheit ist\\s*:\\s*"
     },
     {
-      "find": "what are your thoughts?",
+      "find": "Hallo zusammen!",
       "replace": "",
-      "family": "closers"
+      "family": "einstiege",
+      "match": "(?m)^\\s*(?:hallo|hi|hey) (?:zusammen|ihr lieben|leute|alle)\\s*[!,.]*(?:\\s*[🌀-🫿☀-➿])*\\s*"
     },
     {
-      "find": "drop a comment below",
+      "find": "Liebe Community,",
       "replace": "",
-      "family": "closers"
+      "family": "einstiege",
+      "match": "(?m)^\\s*liebe (?:community|follower\\w*)\\s*[!,.]*\\s*"
     },
     {
-      "find": "at the end of the day",
+      "find": "Herzlich willkommen auf unserem Profil!",
       "replace": "",
-      "family": "closers"
+      "family": "einstiege",
+      "match": "\\b(?:herzlich )?willkommen (?:zu(?:rück)?|auf|bei) (?:unserem|meinem) (?:kanal|profil|account)\\s*[!.]*\\s*"
     },
     {
-      "find": "needle-moving",
-      "replace": "useful",
-      "family": "closers"
-    },
-    {
-      "find": "move the needle",
-      "replace": "make a difference",
-      "family": "closers"
-    },
-    {
-      "find": "a testament to",
-      "replace": "proof of",
-      "family": "nouns"
-    },
-    {
-      "find": "had the opportunity to",
-      "replace": "got to",
-      "family": "connectives"
-    },
-    {
-      "find": "i am excited to announce",
+      "find": "Folge uns für mehr!",
       "replace": "",
-      "family": "openers"
+      "family": "schluss",
+      "match": "\\bfolg(?:e|t|en sie)? (?:mir|uns) für (?:mehr|weitere)\\b[^.!?\\n]*[.!]*"
     },
     {
-      "find": "i'm thrilled to share",
+      "find": "Zögern Sie nicht, uns zu kontaktieren.",
+      "replace": "melden Sie sich",
+      "family": "schluss",
+      "match": "\\bzögern sie nicht,? (?:uns )?(?:bei fragen )?(?:zu kontaktieren|anzurufen|sich (?:bei uns )?zu melden|uns zu schreiben)\\b"
+    },
+    {
+      "find": "Zögere nicht, uns zu kontaktieren.",
+      "replace": "melde dich",
+      "family": "schluss",
+      "match": "\\bzöger(?:e)? nicht,? (?:mich |uns )?(?:bei fragen )?(?:zu kontaktieren|anzurufen|dich (?:bei (?:mir|uns) )?zu melden|(?:mir|uns) zu schreiben)\\b"
+    },
+    {
+      "find": "Kontaktieren Sie uns noch heute",
+      "replace": "schreiben Sie uns",
+      "family": "schluss",
+      "match": "\\bkontaktieren sie uns (?:noch )?heute\\b"
+    },
+    {
+      "find": "Wir freuen uns auf Ihre Anfrage!",
       "replace": "",
-      "family": "openers"
+      "family": "schluss",
+      "match": "\\bwir freuen uns auf (?:ihre|deine|eure) (?:anfrage|nachricht|kontaktaufnahme|rückmeldung)\\s*[!.]*"
     },
     {
-      "find": "i am humbled to",
+      "find": "Wir sind für Sie da.",
       "replace": "",
-      "family": "openers"
+      "family": "schluss",
+      "match": "\\bwir sind (?:jederzeit |gerne |immer )?für (?:sie|dich|euch) da\\s*[!.]*"
     },
     {
-      "find": "without further ado",
+      "find": "Ich hoffe, das hilft!",
       "replace": "",
-      "family": "openers"
+      "family": "schluss",
+      "match": "\\bich hoffe,? (?:das|dieser beitrag|diese tipps?) (?:hilft|helfen|war hilfreich)\\b[^.!?\\n]*[.!]*"
     },
     {
-      "find": "buckle up",
+      "find": "Schau bis zum Ende!",
       "replace": "",
-      "family": "openers"
+      "family": "instagram",
+      "match": "\\b(?:schau|schaut|schauen sie) (?:unbedingt )?bis zum (?:ende|schluss)\\b[^.!?\\n]*[.!]*"
     },
     {
-      "find": "the harsh truth is",
-      "replace": "",
-      "family": "openers"
+      "find": "Ihr zuverlässiger Partner",
+      "replace": null,
+      "family": "werbedeutsch",
+      "match": "\\b(?:ihr|dein|euer) (?:zuverlässiger|kompetenter|starker|erfahrener|verlässlicher|professioneller) partner\\b",
+      "hint": "Was genau macht der Partner? Leistung + Beleg."
     },
     {
-      "find": "spoiler alert",
-      "replace": "",
-      "family": "openers"
+      "find": "Qualität steht bei uns an erster Stelle",
+      "replace": null,
+      "family": "werbedeutsch",
+      "match": "\\bqualität (?:steht|hat) bei uns\\b",
+      "hint": "Sagt jeder. Wie wird Qualität geprüft? Das zeigen."
     },
     {
-      "find": "read that again",
-      "replace": "",
-      "family": "closers"
+      "find": "mit Leidenschaft",
+      "replace": null,
+      "family": "werbedeutsch",
+      "match": "\\bmit (?:viel |großer )?leidenschaft\\b",
+      "hint": "Sagt jeder. Zeig einen Moment, in dem es sichtbar wird."
     },
     {
-      "find": "you're welcome",
-      "replace": "",
-      "family": "closers"
+      "find": "aus einer Hand",
+      "replace": null,
+      "family": "werbedeutsch",
+      "match": "\\baus einer hand\\b",
+      "hint": "Was genau ist alles drin? Aufzählen."
     },
     {
-      "find": "save this for later",
-      "replace": "",
-      "family": "closers"
+      "find": "auf Augenhöhe",
+      "replace": null,
+      "family": "werbedeutsch",
+      "match": "\\bauf augenhöhe\\b",
+      "hint": "Woran merkt der Kunde das?"
     },
     {
-      "find": "who's with me",
-      "replace": "",
-      "family": "closers"
+      "find": "Hand in Hand",
+      "replace": null,
+      "family": "werbedeutsch",
+      "match": "\\bhand in hand\\b",
+      "hint": "Wer macht was?"
     },
     {
-      "find": "stop scrolling",
-      "replace": "",
-      "family": "openers"
+      "find": "Schlüssel zum Erfolg",
+      "replace": null,
+      "family": "werbedeutsch",
+      "match": "\\bschlüssel zu(?:m|r) (?:erfolg|zufriedenheit)\\b",
+      "hint": "Den Schlüssel nennen, nicht die Tür."
     },
     {
-      "find": "don't scroll past this",
-      "replace": "",
-      "family": "openers"
+      "find": "die digitale Landschaft",
+      "replace": null,
+      "family": "werbedeutsch",
+      "match": "\\b(?:digitale[nr]?|heutige[nr]?) landschaft\\b",
+      "hint": "Welcher Markt genau?"
     },
     {
-      "find": "in this video i'm going to show you",
-      "replace": "",
-      "family": "openers"
+      "find": "auf dieser Reise",
+      "replace": null,
+      "family": "werbedeutsch",
+      "match": "\\b(?:auf (?:dieser|unserer|deiner|ihrer) )?reise\\b(?= (?:zu|in|zum|zur|begleiten|mitnehmen))|\\bauf (?:dieser|unserer) reise\\b",
+      "hint": "Projekt, Umstellung, Jahr. Nicht Reise."
     },
     {
-      "find": "in today's video",
-      "replace": "",
-      "family": "openers"
+      "find": "Wir freuen uns, Ihnen mitteilen zu dürfen",
+      "replace": null,
+      "family": "werbedeutsch",
+      "match": "\\bwir freuen uns,? (?:ihnen|euch|dir) (?:\\w+ ){0,3}(?:mitteilen|vorstellen|präsentieren|bekannt ?geben) zu (?:dürfen|können)\\b",
+      "hint": "Mit der Nachricht anfangen, nicht mit der Freude."
     },
     {
-      "find": "watch till the end",
-      "replace": "",
-      "family": "openers"
+      "find": "Wir sind stolz",
+      "replace": null,
+      "family": "werbedeutsch",
+      "match": "\\bwir sind (?:sehr |unglaublich |mächtig )?stolz\\b",
+      "hint": "Zeig das Ergebnis, der Stolz versteht sich."
     },
     {
-      "find": "you won't believe",
-      "replace": "",
-      "family": "openers"
+      "find": "Hör auf zu scrollen",
+      "replace": null,
+      "family": "instagram",
+      "match": "\\b(?:hör|hört|hören sie) auf zu scrollen\\b|\\bnicht (?:weiter)?scrollen\\b",
+      "hint": "Der Hook muss selbst stoppen. Bitten beweist das Gegenteil."
     },
     {
-      "find": "nobody is talking about this",
-      "replace": "few people do this",
-      "family": "openers"
+      "find": "In diesem Video",
+      "replace": null,
+      "family": "instagram",
+      "match": "\\b(?:in diesem|im heutigen) (?:video|reel|beitrag|post|clip)\\b",
+      "hint": "Streichen, beim Ergebnis anfangen."
     },
     {
-      "find": "no one is talking about this",
-      "replace": "few people do this",
-      "family": "openers"
+      "find": "Heute zeige ich euch",
+      "replace": null,
+      "family": "instagram",
+      "match": "\\bheute zeige? ich (?:euch|dir|ihnen)\\b|\\bich zeige? (?:euch|dir|ihnen) heute\\b",
+      "hint": "Streichen, gleich zeigen."
     },
     {
-      "find": "this changed everything",
-      "replace": "this worked",
-      "family": "openers"
+      "find": "Der Algorithmus liebt",
+      "replace": null,
+      "family": "instagram",
+      "match": "\\bder algorithmus (?:liebt|mag|belohnt|hasst)\\b",
+      "hint": "Behauptung ohne Beleg. Streichen."
     },
     {
-      "find": "this is your sign to",
-      "replace": "",
-      "family": "openers"
+      "find": "Das musst du sehen",
+      "replace": null,
+      "family": "instagram",
+      "match": "\\bdas (?:musst du|müssen sie) (?:unbedingt )?sehen\\b",
+      "hint": "Zeig es, statt es anzukündigen."
     },
     {
-      "find": "little did i know",
-      "replace": "",
-      "family": "connectives"
+      "find": "Markiere jemanden",
+      "replace": null,
+      "family": "instagram",
+      "match": "\\bmarkier(?:e|t|en sie)? (?:jemanden|eine person|einen (?:kollegen|freund)|deine[nr]? \\w+)\\b",
+      "hint": "Generischer Köder. Frag nach dem einen Schritt, den dieser Post verdient."
     },
     {
-      "find": "fast forward to today",
-      "replace": "now",
-      "family": "connectives"
+      "find": "Teile das mit jemandem, der",
+      "replace": null,
+      "family": "instagram",
+      "match": "\\bteil(?:e|t|en sie)? (?:das|diesen (?:beitrag|post)) mit (?:jemandem|einem|deinem|ihrem)\\b",
+      "hint": "Generischer Köder. Wenn teilen, dann mit einem Grund."
     },
     {
-      "find": "and just like that",
-      "replace": "",
-      "family": "connectives"
+      "find": "Doppelt tippen, wenn",
+      "replace": null,
+      "family": "instagram",
+      "match": "\\bdoppel(?:t |-)?tipp\\w*|\\bdoppelklick,? wenn\\b",
+      "hint": "Köder. Streichen."
     },
     {
-      "find": "the rest is history",
-      "replace": "",
-      "family": "closers"
+      "find": "Kommentiere mit einem Emoji",
+      "replace": null,
+      "family": "instagram",
+      "match": "\\bkommentier\\w* (?:mit )?(?:einem|ein) (?:emoji|herz)\\b",
+      "hint": "Köder. Stell eine echte Frage."
     },
     {
-      "find": "run don't walk",
-      "replace": "",
-      "family": "closers"
-    },
-    {
-      "find": "trust me on this one",
-      "replace": "",
-      "family": "closers"
-    },
-    {
-      "find": "don't sleep on this",
-      "replace": "",
-      "family": "closers"
-    },
-    {
-      "find": "follow for more",
-      "replace": "",
-      "family": "closers"
-    },
-    {
-      "find": "hit follow for more",
-      "replace": "",
-      "family": "closers"
-    },
-    {
-      "find": "double tap if",
-      "replace": "",
-      "family": "closers"
-    },
-    {
-      "find": "tag someone who needs this",
-      "replace": "",
-      "family": "closers"
-    },
-    {
-      "find": "let me know in the comments",
-      "replace": "",
-      "family": "closers"
-    },
-    {
-      "find": "share this with someone who needs it",
-      "replace": "",
-      "family": "closers"
-    },
-    {
-      "find": "the algorithm loves",
-      "replace": "Instagram pushes",
-      "family": "nouns"
-    },
-    {
-      "find": "beat the algorithm",
-      "replace": "get reach",
-      "family": "nouns"
-    },
-    {
-      "find": "go viral overnight",
-      "replace": "get reach",
-      "family": "nouns"
+      "find": "Speichere dir das für später",
+      "replace": null,
+      "family": "instagram",
+      "match": "\\bspeicher\\w* (?:dir|ihnen|euch|sich) (?:das|den beitrag|diesen post) für später\\b",
+      "hint": "Ok, wenn der Post wirklich etwas zum Nachschlagen ist. Sonst Köder."
     }
   ],
   "structures": [
     {
-      "id": "not-just",
-      "regex": "(?i)\\bit'?s not (?:just|only) [^.!?\\n]{2,60}[,.] it'?s\\b",
-      "name": "\"It's not just X, it's Y\"",
-      "fix": "Say the one thing you actually mean. Delete the setup half."
+      "id": "nicht-nur",
+      "regex": "(?i)\\bnicht nur\\b[^.!?\\n]{2,80}\\bsondern (?:auch\\b)?",
+      "name": "\"Nicht nur X, sondern auch Y\"",
+      "fix": "Das KI-Deutsch-Muster schlechthin. Zwei Sätze, oder die schwächere Hälfte streichen."
     },
     {
-      "id": "not-only",
-      "regex": "(?i)\\bnot only\\b[^.!?\\n]{2,80}\\bbut also\\b",
-      "name": "\"Not only X but also Y\"",
-      "fix": "Split into two sentences, or drop the weaker half."
+      "id": "nicht-einfach",
+      "regex": "(?i)\\b(?:das|es|dies) ist (?:nicht (?:einfach|nur|bloß)|mehr als (?:nur|einfach)?)\\s*(?:ein|eine)\\b[^.!?\\n]{2,60}[.,:]\\s*(?:es|das|sondern)\\b",
+      "name": "\"Das ist nicht einfach ein X, es ist Y\"",
+      "fix": "Sag das Eine, das du meinst. Die Vorbereitung streichen."
     },
     {
-      "id": "isnt-about",
-      "regex": "(?i)\\b(?:this|it) is(?:n'?t| not) about [^.!?\\n]{2,60}[.!] it'?s about\\b",
-      "name": "\"It isn't about X. It's about Y.\"",
-      "fix": "Lead with Y. The reversal is the tell."
+      "id": "geht-nicht-um",
+      "regex": "(?i)\\bes geht nicht (?:nur |bloß )?(?:um|darum)\\b[^.!?\\n]{2,60}[.,]\\s*(?:es geht|sondern)\\b",
+      "name": "\"Es geht nicht um X. Es geht um Y.\"",
+      "fix": "Mit Y anfangen. Die Umkehrung ist das Erkennungszeichen."
     },
     {
-      "id": "the-result",
-      "regex": "(?i)^\\s*(?:the result|the best part|the kicker|the catch)\\?\\s*$",
-      "name": "One-word rhetorical question line",
-      "fix": "Answer it inline instead of staging a reveal."
+      "id": "hier-kommt",
+      "regex": "(?i)\\b(?:hier|da) kommt\\b[^.!?\\n]{1,40}\\bins spiel\\b",
+      "name": "\"Hier kommt X ins Spiel\"",
+      "fix": "Übersetztes Englisch. X einfach einführen."
     },
     {
-      "id": "heres-what",
-      "regex": "(?i)\\bhere'?s what (?:i|we) learned\\b",
-      "name": "\"Here's what I learned\"",
-      "fix": "State the lesson. Skip the announcement."
+      "id": "genau-hier",
+      "regex": "(?i)\\b(?:genau )?(?:hier|da) setzt\\b[^.!?\\n]{1,40}\\ban\\b",
+      "name": "\"Genau hier setzt X an\"",
+      "fix": "Werbedeutsch. Sag, was X tut."
     },
     {
-      "id": "triad",
-      "regex": "(?i)\\b\\w+, \\w+, and \\w+\\.",
-      "name": "Rule-of-three triad",
-      "fix": "Two items or four. Three is the model's default rhythm."
+      "id": "egal-ob",
+      "regex": "(?i)\\begal,? ob\\b[^.!?\\n]{2,60}\\boder\\b",
+      "name": "\"Egal, ob X oder Y\"",
+      "fix": "Sich für eine Zielgruppe entscheiden. 'Egal ob' heißt: für keinen bestimmten."
     },
     {
-      "id": "rocket",
-      "regex": "[\\U0001F680\\U0001F525\\U0001F4A1\\u2728\\U0001F3AF]",
-      "name": "Rocket / fire / bulb / sparkle / dart emoji",
-      "fix": "One emoji max, and not one of these five."
+      "id": "rhetorische-zeile",
+      "regex": "(?im)^\\s*(?:das ergebnis|das beste|der clou|der haken|die lösung|das problem|der grund|und jetzt|die antwort)\\?\\s*$",
+      "name": "Rhetorische Ein-Zeilen-Frage",
+      "fix": "Direkt im Satz beantworten, statt eine Enthüllung zu inszenieren."
     },
     {
-      "id": "hashtag-wall",
-      "regex": "(?:#\\w+[ \\t]*){5,}",
-      "name": "Hashtag wall (5+)",
-      "fix": "Three hashtags. LinkedIn stopped rewarding the wall."
+      "id": "doppelpunkt-titel",
+      "regex": "(?m)^\\s*(?:Das|Die|Der) (?:Problem|Lösung|Ergebnis|Geheimnis|Fazit|Wichtigste|Beste|Learning)\\s*:\\s*$",
+      "name": "Zwischentitel mit Doppelpunkt",
+      "fix": "Eine Caption ist kein Foliensatz. Als Satz schreiben."
     },
     {
-      "id": "as-an-ai",
-      "regex": "(?i)\\bas an ai\\b|\\bas a language model\\b",
-      "name": "Model self-reference",
-      "fix": "Delete the sentence."
+      "id": "gelernt",
+      "regex": "(?i)\\b(?:hier ist,? was|das habe|das hab|folgendes habe) (?:ich|wir) (?:\\w+ )?gelernt\\b",
+      "name": "\"Das habe ich gelernt:\"",
+      "fix": "Die Lektion sagen. Die Ankündigung streichen."
     },
     {
-      "id": "in-summary",
-      "regex": "(?i)^\\s*(?:in summary|to summarize|in conclusion)\\b",
-      "name": "Essay-closer opener",
-      "fix": "A post does not need a conclusion paragraph."
+      "id": "dreier",
+      "regex": "\\b(?:[\\wäöüß]+ ){0,2}[\\wäöüß]+, (?:[\\wäöüß]+ ){0,2}[\\wäöüß]+ und (?:[\\wäöüß]+ ){0,2}[\\wäöüß]+[.!]",
+      "name": "Dreierreihe \"X, Y und Z.\"",
+      "fix": "Zwei oder vier. Drei ist der Standardrhythmus von Sprachmodellen."
     },
     {
-      "id": "engagement-bait",
-      "regex": "(?i)\\b(?:agree\\?|thoughts\\?|who else\\b|am i wrong\\?)\\s*$",
-      "name": "Reflex engagement bait",
-      "fix": "Ask a question only you could ask, about the specific thing above it."
+      "id": "stell-dir-vor",
+      "regex": "(?im)^\\s*(?:stell dir vor|stellen sie sich vor|stellt euch vor)\\b",
+      "name": "\"Stell dir vor\"-Einstieg",
+      "fix": "Nicht vorstellen lassen, gleich erzählen, was passiert ist."
     },
     {
-      "id": "stop-scroll",
-      "regex": "(?im)^\\s*(?:stop scrolling|don'?t scroll|wait[,.]? don'?t scroll)\\b",
-      "name": "\"Stop scrolling\" opener",
-      "fix": "The scroll-stop has to be the claim itself. Asking for attention is the tell that you have not earned it."
+      "id": "rakete",
+      "regex": "[🚀🔥💡✨🎯💪]",
+      "name": "Rakete / Feuer / Glühbirne / Glitzer / Zielscheibe / Bizeps",
+      "fix": "Höchstens ein Emoji, und keins von diesen sechs."
     },
     {
-      "id": "in-this-video",
-      "regex": "(?i)\\b(?:in (?:this|today'?s) (?:video|reel|post)|today i'?m going to show you|i'?m going to (?:show|teach) you how)\\b",
-      "name": "Video preamble (\"in this video I'm going to show you\")",
-      "fix": "Delete it and start at the payoff. The first two seconds decide the whole reel."
+      "id": "hashtag-wand",
+      "regex": "(?:#\\w+[ \\t]*){6,}",
+      "name": "Hashtag-Wand (6+)",
+      "fix": "Instagram zählt seit Dezember 2025 nur noch fünf. Drei gute reichen."
     },
     {
-      "id": "emoji-bullets",
-      "regex": "(?m)^\\s*[\\U0001F300-\\U0001FAFF✅➡⬅✔✨]\\s*\\S",
-      "name": "Emoji bullet list",
-      "fix": "Use a hyphen or a line break. Emoji bullets are the single most template-looking thing in a caption."
+      "id": "als-ki",
+      "regex": "(?i)\\bals (?:ki|künstliche intelligenz|sprachmodell|ki-modell)\\b",
+      "name": "Modell spricht über sich selbst",
+      "fix": "Den Satz löschen."
     },
     {
-      "id": "caps-shout",
-      "regex": "\\b[A-Z]{3,}\\b(?:\\s+\\b[A-Z]{3,}\\b){2,}",
-      "name": "Three or more shouted words in a row",
-      "fix": "Caps are a volume knob, not a highlighter. One word, at most."
+      "id": "zusammenfassend",
+      "regex": "(?im)^\\s*(?:zusammenfassend|abschließend|alles in allem|fazit\\s*:|unterm strich|im großen und ganzen)\\b",
+      "name": "Aufsatz-Schluss",
+      "fix": "Ein Post braucht keinen Schlussabsatz."
     },
     {
-      "id": "follow-bait",
-      "regex": "(?i)\\b(?:follow for more|tag someone who|double tap if|share this if|comment below if)\\b",
-      "name": "Reflex follow or tag bait",
-      "fix": "Ask for the one action this post actually earns. The generic ask trains the audience to ignore every ask."
+      "id": "engagement-koeder",
+      "regex": "(?im)(?:was meint ihr|was denkt ihr|was sagt ihr|wer kennt'?s|wer kennt das|seht ihr das auch so|wie seht ihr das|bin ich (?:der|die) einzige|stimmt'?s|oder\\?|was meinen sie|sehen sie das auch so)\\s*\\?*\\s*$",
+      "name": "Reflex-Köderfrage am Ende",
+      "fix": "Eine Frage stellen, die nur du stellen kannst, über genau das, was darüber steht."
+    },
+    {
+      "id": "stopp-scroll",
+      "regex": "(?im)^\\s*(?:hör auf zu scrollen|nicht (?:weiter)?scrollen|stopp!?\\s*$|warte,? nicht scrollen)",
+      "name": "\"Hör auf zu scrollen\"-Einstieg",
+      "fix": "Der Stopp muss die Aussage selbst sein. Um Aufmerksamkeit zu bitten verrät, dass sie fehlt."
+    },
+    {
+      "id": "video-vorlauf",
+      "regex": "(?i)\\b(?:in diesem (?:video|reel|beitrag|clip)|im heutigen (?:video|reel|beitrag)|heute zeige? ich (?:euch|dir|ihnen)|ich zeige? (?:euch|dir|ihnen),? wie)\\b",
+      "name": "Video-Vorlauf (\"In diesem Video zeige ich euch\")",
+      "fix": "Streichen und beim Ergebnis anfangen. Die ersten zwei Sekunden entscheiden das ganze Reel."
+    },
+    {
+      "id": "emoji-liste",
+      "regex": "(?m)^\\s*[🌀-🫿✅➡⬅✔✨▶⭐]\\s*\\S",
+      "name": "Emoji-Aufzählung",
+      "fix": "Bindestrich oder Zeilenumbruch. Emoji-Aufzählungen sehen am meisten nach Vorlage aus."
+    },
+    {
+      "id": "caps",
+      "regex": "\\b[A-ZÄÖÜ]{3,}\\b(?:\\s+\\b[A-ZÄÖÜ]{3,}\\b){2,}",
+      "name": "Drei oder mehr Wörter in Großbuchstaben",
+      "fix": "Großbuchstaben sind ein Lautstärkeregler, kein Textmarker. Ein Wort, höchstens."
+    },
+    {
+      "id": "folge-koeder",
+      "regex": "(?i)\\b(?:folg(?:e|t)? (?:mir|uns) für mehr|markier(?:e)? jemanden|teile? das mit jemandem|doppelt tippen,? wenn|kommentier\\w* ein emoji)\\b",
+      "name": "Reflex-Folge- oder Markier-Köder",
+      "fix": "Um den einen Schritt bitten, den dieser Post wirklich verdient. Der generische Köder bringt das Publikum dazu, jede Bitte zu überlesen."
+    },
+    {
+      "id": "firmen-freude",
+      "regex": "(?i)\\bwir (?:freuen uns|sind stolz|sind froh)\\b",
+      "name": "Firmen-Freude (\"Wir freuen uns\")",
+      "fix": "Keiner scrollt, um zu hören, dass Sie sich freuen. Mit dem Nutzen für den Kunden anfangen."
+    },
+    {
+      "id": "gedankenstriche",
+      "regex": "(?:\\s[–—]\\s[^\\n]*){3,}",
+      "name": "Gedankenstrich-Häufung",
+      "fix": "Drei Gedankenstriche in einem Text sind ein Fingerabdruck. Punkt, Komma oder Doppelpunkt."
     }
   ]
 }

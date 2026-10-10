@@ -1,104 +1,152 @@
 ---
 name: ig-audit
 description: >-
-  Post-mortem on what the user has already posted - which reels actually
-  worked, why, and what to stop making. Use when the user pastes their
-  Instagram insights or past posts and asks "what's working", "why did this
-  flop", "read my analytics", "audit my content", or wants to know what to do
-  more of.
+  Auswertung dessen, was der Nutzer schon gepostet hat: welche Reels wirklich
+  funktioniert haben, warum, welche Anfragen sie gebracht haben und was er
+  nicht mehr machen sollte. Für B2B: neben Reichweite auch Profilaufrufe,
+  Link-Klicks, DMs und qualifizierte Gespräche. Verwenden, wenn der Nutzer
+  Insights oder alte Posts einfügt und fragt "Auswertung", "was funktioniert",
+  "warum ist das gefloppt", "lies meine Insights", "analysier meinen
+  Content", "bringt uns Instagram Anfragen", oder wissen will, wovon er mehr
+  machen soll.
 ---
 
 # ig-audit
 
-The only honest source of what works for an account is that account. Every
-rule in every Instagram guide, including the ones in this pack, is a prior.
-The user's own last 30 posts are the evidence.
+Die einzige ehrliche Quelle dafür, was bei einem Konto funktioniert, ist das
+Konto selbst. Jede Regel in jedem Instagram-Ratgeber, auch die in diesem
+Paket, ist eine Vorannahme. Die letzten 30 Posts des Nutzers sind der Beleg.
 
-## Input
+## Eingabe
 
-Ask for whichever the user has:
+Frag nach dem, was der Nutzer hat:
 
-- Insights per post: views, reach, interactions, watch time, saves, shares,
-  follows, and the non-follower share of reach. Screenshots are fine.
-- Or the retention graph for their best and worst recent reels. This one
-  screenshot is worth more than the rest combined.
-- Or just the posts and their view counts, which is enough for a first pass.
+- Insights pro Post: Aufrufe, Reichweite, Interaktionen, Wiedergabedauer,
+  Gespeichert, Geteilt, Follows und den Anteil der Reichweite bei
+  Nicht-Followern. Screenshots reichen.
+- Oder die Zuschauerbindungskurve des besten und des schlechtesten Reels der
+  letzten Wochen. Dieser eine Screenshot ist mehr wert als alles andere
+  zusammen.
+- Oder nur die Posts mit ihren Aufrufen. Für einen ersten Durchgang reicht
+  das.
 
-Also read `~/.claude/instagram/log.md` if it exists, since it records which
-hook formula each post used.
+Für B2B zusätzlich, soweit vorhanden:
 
-## What to actually measure
+- **Profilaktivität pro Post**: Profilaufrufe und Taps auf den Link im Profil
+  bzw. externe Links.
+- **DMs und Anfragen pro Post**: Keyword-DMs, Anfragen mit Bezug auf ein Reel,
+  Antworten auf "Wie sind Sie auf uns aufmerksam geworden?".
+- **Qualifizierte Gespräche aus dem CRM**: Termine, Angebote, Ausschreibungen
+  mit Quelle Instagram. Zahlen pro Post oder Monat reichen, Namen und
+  Kontaktdaten braucht das Audit nicht.
 
-Raw views is the least useful number on the page, because it is mostly a
-function of how many people already follow the account. Compute these instead
-and show the working:
+Diese Werte **nie raten und nie aus Aufrufen hochrechnen**. Was der Nutzer
+nicht liefert, bleibt leer und wird in der Ausgabe als fehlend markiert.
 
-| metric | how | what it tells you |
+Lies außerdem `~/.claude/instagram/log.md`, falls vorhanden. Dort steht,
+welche Hook-Formel jeder Post verwendet hat.
+
+## Was wirklich gemessen wird
+
+Aufrufe sind die am wenigsten nützliche Zahl auf der Seite, weil sie vor allem
+davon abhängen, wie viele Leute dem Konto schon folgen. Berechne stattdessen
+diese Werte und zeig den Rechenweg:
+
+| Kennzahl | Berechnung | was sie zeigt |
 | --- | --- | --- |
-| **Outlier multiple** | views / the account's own median views | whether this was a real hit or a normal day |
-| **Non-follower reach** | % of reach from people who do not follow | whether it travelled at all |
-| **Hold at 3s** | viewers still there at 3s / viewers who started | whether the hook worked. This is the hook's grade. |
-| **Average watch time** | straight from insights | whether the middle worked |
-| **Sends per reach** | shares / reach | the strongest single signal you can earn. A send is a person putting their name on it. |
-| **Follows per reach** | follows / reach | whether the profile converted the attention |
+| **Outlier-Multiplikator** | Aufrufe / Median-Aufrufe des Kontos | ob das ein echter Treffer war oder ein normaler Tag |
+| **Nicht-Follower-Reichweite** | % der Reichweite von Leuten, die nicht folgen | ob es überhaupt gewandert ist |
+| **Halterate nach 3 s** | Zuschauer nach 3 s / Zuschauer, die gestartet haben | ob der Hook funktioniert hat. Das ist die Note für den Hook. |
+| **Durchschnittliche Wiedergabedauer** | direkt aus den Insights | ob die Mitte funktioniert hat |
+| **Sends pro Reichweite** | Geteilt / Reichweite | das stärkste Einzelsignal, das man sich verdienen kann. Wer teilt, setzt seinen Namen darunter. Im B2B oft: an Kollegen oder den Chef weitergeleitet. |
+| **Follows pro Reichweite** | Follows / Reichweite | ob das Profil die Aufmerksamkeit umgewandelt hat |
+| **Profilaufrufe pro Reichweite** | Profilaufrufe / Reichweite | ob jemand wissen wollte, wer dahintersteckt |
+| **Link-Klicks** | Taps auf Links / Profilaufrufe | ob das Profil einen nächsten Schritt anbietet, den jemand nimmt |
+| **Anfragen pro Post** | DMs mit echtem Anliegen, gezählt vom Nutzer | ob der Post Gespräche bringt |
+| **Qualifizierte Gespräche** | aus dem CRM, nur wenn geliefert | ob daraus Geschäft werden kann |
 
-Rank by outlier multiple and sends per reach, not views. A reel with 4,000
-views and 90 sends beat the one with 60,000 views and 11.
+Sortiere nach Outlier-Multiplikator und Sends pro Reichweite, nicht nach
+Aufrufen. Ein Reel mit 2.000 Aufrufen und 60 Sends hat das mit 40.000
+Aufrufen und 11 Sends geschlagen.
 
-## Then find the pattern
+Liegen Anfragen oder CRM-Zahlen vor, sind sie das Urteil und die anderen
+Kennzahlen die Erklärung. Ein Reel mit 3.000 Aufrufen und zwei Anfragen von
+Geschäftsführern schlägt eines mit 80.000 und keiner. Aber: Anfragen sind
+seltene Ereignisse. Zwei Anfragen auf einem Post sind ein Hinweis, kein
+Muster. Zähl sie über alle Posts zusammen, gruppiert nach Formel und Thema.
 
-With the top five and bottom five side by side, look for what separates them,
-and be willing to conclude something the user will not like:
+## Dann das Muster finden
 
-- **Hold at 3 seconds.** If the top and bottom differ here, it is the hook and
-  nothing else, and everything downstream is a distraction.
-- **Hook formula.** Which ids from `ig-reel/hooks.json` are in the top five?
-- **Format.** Reel, carousel, single image.
-- **Length.** Group into under 15s, 15 to 30s, 30 to 60s, over 60s.
-- **Theme.**
-- **Whether the user replied to comments in the first hour.**
-- **Day and time.** Check this **last** and only if the others show nothing.
-  It is almost never the cause and it is where people want it to be.
+Leg die Top 5 und die Bottom 5 nebeneinander, such, was sie trennt, und sei
+bereit, etwas zu folgern, das dem Nutzer nicht gefällt:
 
-State the finding as a claim with the evidence attached, and say how confident
-it is. With 30 posts you can see a pattern. With 6 you cannot, and saying so is
-better than inventing one.
+- **Halterate nach 3 Sekunden.** Unterscheiden sich Top und Bottom hier, liegt
+  es am Hook und an nichts anderem. Alles danach ist Ablenkung.
+- **Hook-Formel.** Welche IDs aus `ig-reel/hooks.json` stehen in den Top 5?
+- **Format.** Reel, Karussell, Einzelbild.
+- **Länge.** In Gruppen: unter 15 s, 15–30 s, 30–60 s, über 60 s.
+- **Thema.**
+- **Publikum.** Kam die Reichweite von möglichen Kunden oder von Kollegen aus
+  der eigenen Branche? Branchenwitze holen oft Reichweite bei der Konkurrenz
+  und keine einzige Anfrage. Hinweise darauf: wer kommentiert, wer folgt.
+- **Ob der Nutzer in der ersten Stunde auf Kommentare geantwortet hat.**
+- **Wochentag und Uhrzeit.** Das **zuletzt** prüfen und nur, wenn alles
+  andere nichts zeigt. Es ist fast nie die Ursache, und genau dort wollen die
+  Leute sie finden.
 
-## The distinction that saves people months
+Formulier den Befund als Aussage mit dem Beleg daneben und sag, wie sicher er
+ist. Mit 30 Posts sieht man ein Muster. Mit 6 nicht, und das zu sagen ist
+besser, als eines zu erfinden.
 
-**A reel that gets views and no follows is not a failed reel, it is a profile
-problem.** A reel that gets no views is a hook problem. Separate the two before
-recommending anything. If non-follower reach is high and follows per reach is
-low, stop rewriting hooks and go to `/ig-profile`.
+## Die Unterscheidung, die Monate spart
 
-## Output
+**Ein Reel mit Aufrufen und ohne Follows ist kein gescheitertes Reel, sondern
+ein Profilproblem.** Ein Reel ohne Aufrufe ist ein Hook-Problem. Trenn die
+beiden, bevor du irgendetwas empfiehlst. Ist die Nicht-Follower-Reichweite
+hoch und Follows pro Reichweite niedrig, hör auf, Hooks umzuschreiben, und geh
+zu `/ig-profile`.
+
+Im B2B gibt es eine dritte Stufe: **Profilaufrufe, aber keine Link-Klicks und
+keine Anfragen** heißt, das Profil sagt nicht, was der nächste Schritt ist.
+Auch das ist ein Fall für `/ig-profile`, nicht für neue Hooks.
+
+## Ausgabe
 
 ```
-AUDIT  ·  31 posts  ·  Jun 12 - Sep 5  ·  median views 4,100
+AUDIT  ·  31 Posts  ·  12.06.–05.09.  ·  Median-Aufrufe 1.900
 
-TOP 5 BY OUTLIER MULTIPLE
-  18.2x  #3  Nobody Tells You   74,600 views  62% non-follower  hold@3s 71%  128 sends
-   6.4x  #1  Cost Confession    26,300 views  48% non-follower  hold@3s 64%   71 sends
+TOP 5 NACH OUTLIER-MULTIPLIKATOR
+                                  Aufrufe  Nicht-F.  Halt 3s  Sends  Profil  Links  Anfr.
+  18,2x  #3  Sagt dir keiner       34.600     62 %     71 %     128     210     14     1
+   6,4x  #1  Kostenbeichte         12.200     48 %     64 %      71     340     31     4
+   5,1x  #25 Kundenergebnis         9.700     41 %     60 %      44     290     27     3
   ...
 
 BOTTOM 5
-   0.3x  #11 Numbered            1,200 views  9% non-follower   hold@3s 31%    2 sends
+   0,3x  #11 Liste mit Favorit        600      9 %     31 %       2      12      0     0
   ...
 
-WHAT THE DATA SAYS
-1. Hold at 3 seconds is the whole story. Top five average 66%, bottom five 33%.
-   Everything else you are worried about is downstream of the first two seconds.
-2. The posts where you were the one who looked bad: mean 8.1x vs 0.9x for
-   everything else. n=5. Strongest signal here and it is not close.
-3. Tool listicles get views and nothing else. High reach, no sends, no follows.
-   Three of your bottom five.
-4. Day of week shows nothing. Your Tuesday and Friday means are inside the
-   noise. Stop optimising it.
+WAS DIE DATEN SAGEN
+1. Die Halterate nach 3 Sekunden erklärt die Reichweite. Top 5 im Schnitt 66 %,
+   Bottom 5 33 %. Alles andere hängt an den ersten zwei Sekunden.
+2. Anfragen kommen von anderen Posts als die Reichweite. 8 von 11 Anfragen
+   stammen aus Kostenbeichte und Kundenergebnis, mit echten Zahlen aus
+   Kundenprojekten. Das Reel mit der höchsten Reichweite brachte eine.
+   n=31, Tendenz deutlich, aber 11 Anfragen sind wenig.
+3. Tool-Listen holen Reichweite und sonst nichts. Keine Sends, keine
+   Profilaufrufe. Drei der Bottom 5.
+4. CRM (vom Nutzer geliefert): 2 qualifizierte Gespräche im Zeitraum, beide
+   nach Kostenbeichte-Reels. Zu wenig für eine Regel, passt aber zu Punkt 2.
+5. Der Wochentag zeigt nichts. Dienstag und Freitag liegen im Rauschen.
+   Nicht weiter optimieren.
 
-STOP: listicles.
-DO MORE: the ones with a cost you paid and a number attached.
+FEHLT: Link-Klicks für Juni, DMs vor dem 01.07. nicht gezählt.
+
+STOPP: Tool-Listen.
+MEHR DAVON: Posts mit echten Kosten und einer Zahl dazu.
 ```
 
-Then hand the conclusions to `/ig-plan` so next week is built on the user's own
-evidence rather than on defaults, and to `/ig-viral` so the swipe file gets
-filtered to the formulas that work for this account specifically.
+Gib die Schlüsse dann an `/ig-plan` weiter, damit die nächste Woche auf den
+eigenen Belegen des Nutzers aufbaut statt auf Standardwerten, und an
+`/ig-viral`, damit das Swipe-File auf die Formeln gefiltert wird, die bei
+genau diesem Konto funktionieren.

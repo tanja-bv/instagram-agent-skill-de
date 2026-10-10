@@ -1,94 +1,172 @@
 ---
 name: ig-comment
 description: >-
-  Write comments on other people's Instagram posts and reels that read as a
-  person with an opinion, not a bot. Use when the user pastes a post or a reel
-  and wants a comment, says "comment on this", "engage with this", "what do I
-  say here", or wants a batch for their daily engagement round.
+  Kommentare unter Posts und Reels anderer Konten schreiben (Kunden, Partner,
+  Verbände, Fachmedien, Branchenkollegen), die nach einem Menschen mit Meinung
+  klingen und nicht nach Bot. Nutzen, wenn der Nutzer einen Post oder ein Reel
+  einfügt und einen Kommentar will, oder sagt "Kommentar schreiben",
+  "kommentier das", "was schreib ich da drunter", "Kommentar unter den Post
+  von", "Engagement-Runde", oder mehrere Kommentare für die tägliche Runde
+  braucht.
 ---
 
 # ig-comment
 
-Commenting is the highest-leverage twenty minutes on Instagram and the easiest
-to do badly. A comment near the top of a reel with 40,000 views is seen by more
-people than most accounts' own posts, and it is the one place where a stranger
-can tap straight through to a profile.
+Die zwanzig Minuten fürs Kommentieren bringen auf Instagram am meisten, und
+sie sind am leichtesten verschenkt. Ein Kommentar weit oben unter einem Reel
+mit 40.000 Aufrufen wird von mehr Leuten gelesen als die meisten Posts des
+eigenen Kontos, und er ist die eine Stelle, an der Fremde direkt aufs Profil
+tippen.
 
-A generic comment is worse than none. It costs a tap that goes nowhere and it
-marks the account as an engagement-pod account to the one person whose opinion
-mattered, which is the creator.
+Im B2B zählt dabei weniger die Masse als das Publikum. Unter dem Post eines
+Branchenverbands oder Fachmagazins lesen genau die Geschäftsführer,
+Objektleiter und Einkäufer mit, die der Nutzer erreichen will. Unter dem Post
+eines Kunden oder Partners zeigt ein guter Kommentar, dass jemand hinschaut.
 
-## Input
+Ein beliebiger Kommentar ist schlechter als keiner. Er kostet einen Tipp, der
+ins Leere führt. Und er stempelt das Konto als Like-Tausch-Konto ab,
+ausgerechnet bei der einen Person, deren Urteil zählt: der, die gepostet hat.
 
-The user pastes the post or reel text, or a screenshot, with the account name.
-If they give a URL you cannot open, ask them to paste it. Do not use a browser
-tool to scrape the feed and do not post anything.
+## Eingabe
 
-## The nine comment types
+Der Nutzer fügt den Text des Posts oder Reels ein, oder einen Screenshot, mit
+dem Kontonamen. Gibt er eine URL, die du nicht öffnen kannst, bitte ihn, den
+Inhalt einzufügen. Nutze kein Browser-Tool, um den Feed auszulesen, und poste
+nichts.
 
-Pick by what the post actually is. Never default to type 1.
+## Anrede und Absender
 
-| # | type | when | shape |
+- **Anrede nach dem Post.** Duzt das Konto sein Publikum (Caption, Antworten
+  in den Kommentaren), darf der Kommentar duzen. Sonst Sie. Verbände,
+  Kammern, Fachmedien und Kunden im Zweifel Sie. Die Anrede aus
+  `~/.claude/instagram/voice.md` gilt für die eigenen Posts des Nutzers;
+  unter fremden Posts gibt das Konto den Ton vor. Nie beides im selben
+  Kommentar.
+- **Wir oder ich.** Kommentiert der Nutzer mit dem Firmenkonto, schreibt er
+  "wir", mit dem persönlichen Konto der Geschäftsführung "ich". Frag einmal,
+  von welchem Konto kommentiert wird.
+- **Kundenposts.** Unter dem Post eines Kunden nichts aus dem gemeinsamen
+  Projekt, was nicht schriftlich freigegeben ist: keine Zahlen, keine
+  Objekte, keine Konditionen.
+
+## Die neun Kommentartypen
+
+Wähl nach dem, was der Post tatsächlich ist. Nie aus Gewohnheit Typ 1.
+
+| # | Typ | Wann | Form |
 | --- | --- | --- | --- |
-| 1 | **Add a datum** | the post makes a claim you can support with a number | "Same for us: 40% of..." |
-| 2 | **Add the missing case** | the post is right but incomplete | "This holds until {condition}." |
-| 3 | **Respectful disagree** | you genuinely think it is wrong | name the agreement first, then the fork |
-| 4 | **Extend one line** | one line in it is the good one | quote it, build on it |
-| 5 | **Ask the real question** | the post skipped the hard part | one question, specific |
-| 6 | **The receipt** | you have done the thing they described | what happened, two sentences |
-| 7 | **The correction** | there is a factual error | be right, be brief, be kind, be sure |
-| 8 | **The reframe** | right facts, wrong frame | "Another way to read this:" |
-| 9 | **The one-liner** | the post needs nothing, you want presence | under 10 words, must be funny or true |
+| 1 | **Datenpunkt ergänzen** | der Post behauptet etwas, das der Nutzer mit einer Zahl stützen kann | "Bei uns genauso: 40 % der ..." |
+| 2 | **Den fehlenden Fall ergänzen** | der Post stimmt, ist aber unvollständig | "Gilt, bis {Bedingung}." |
+| 3 | **Respektvoll widersprechen** | der Nutzer hält es wirklich für falsch | erst die Zustimmung benennen, dann die Abzweigung |
+| 4 | **Eine Zeile weiterdenken** | eine Zeile darin ist die starke | zitieren, darauf aufbauen |
+| 5 | **Die eigentliche Frage stellen** | der Post hat den schwierigen Teil ausgelassen | eine Frage, konkret |
+| 6 | **Aus der Praxis** | der Nutzer hat genau das schon gemacht | was passiert ist, zwei Sätze |
+| 7 | **Die Korrektur** | es gibt einen sachlichen Fehler | richtig, kurz, freundlich, sicher; bei Zahlen, Recht und Steuern mit Quelle |
+| 8 | **Anders lesen** | richtige Fakten, falscher Rahmen | "Man kann das auch so lesen:" |
+| 9 | **Der Einzeiler** | der Post braucht nichts, der Nutzer will präsent sein | unter 10 Wörtern, muss witzig oder wahr sein |
 
-## Rules
+### So klingt das im B2B
 
-- **One to three sentences.** Instagram comments are read in a narrow column
-  under a video. A paragraph gets collapsed behind "more" and nobody taps it.
-- **Never open with** "Great post", "Love this", "So true", "This 👏", "Needed
-  this today", or the creator's first name with an exclamation mark. All of
-  them are invisible.
-- **No emoji-only comments** and no emoji as the first character.
-- **Never restate the reel.** Everybody watching just watched it.
-- **One idea.** A comment with two points reads as a hijack.
-- **Say the specific thing.** If the comment could sit under any post on the
-  topic, it is not a comment, it is noise.
-- **No pitching, ever.** Not the offer, not the link, not "check out my page".
-  That is the fastest way to be blocked by exactly the person you were trying
-  to reach.
-- **Early matters more here than anywhere.** A comment in the first hour on a
-  reel that then travels gets carried with it.
+Die Zahlen sind Beispiele. Im echten Kommentar nur Zahlen aus voice.md oder vom
+Nutzer, sonst `{{deine Zahl}}`.
 
-## Output
+**1 · Datenpunkt ergänzen** (Fachmagazin über Ausfälle in der Gebäudereinigung)
+> Deckt sich mit unseren Zahlen: Montags fallen bei uns fast doppelt so viele
+> Schichten aus wie mittwochs. Seitdem planen wir montags eine Springerin mehr ein.
 
-Give **two options of different types**, labelled, plus one line on which you
-would post and why. Run both through `/ig-human` first: comments are short, so
-an em dash or a stock phrase is proportionally louder than it is in a caption.
+**2 · Den fehlenden Fall ergänzen** (Sicherheitsdienst: "Feste Reviere sparen Einarbeitung")
+> Gilt, bis jemand krank wird und sonst keiner das Revier kennt. Deshalb kennen
+> bei uns immer mindestens zwei Leute jedes Revier.
+
+**3 · Respektvoll widersprechen** (Handwerksbetrieb: "Öffentliche Ausschreibungen lohnen sich für Kleine nicht")
+> Für die großen Lose stimmt das. Bei kleinen Losen sind wir oft einer von drei
+> Bietern, und gezahlt wird pünktlicher als bei manchem Privatkunden.
+
+**4 · Eine Zeile weiterdenken** (Personaldienstleister: "Die Kündigung beginnt am ersten Arbeitstag")
+> "Die Kündigung beginnt am ersten Arbeitstag." Bei uns oft schon davor: Wer
+> zwei Wochen auf den Vertrag wartet, hat bis dahin woanders unterschrieben.
+
+**5 · Die eigentliche Frage stellen** (Softwareanbieter, der duzt, über eine Einführung bei einem Reinigungsbetrieb)
+> Wie habt ihr die Objektleiter mitgenommen, die seit 20 Jahren mit
+> Papier-Stundenzetteln arbeiten? Daran hängt es bei solchen Umstellungen fast immer.
+
+**6 · Aus der Praxis** (Softwarepartner über Passwort-Manager, kommentiert von einem IT-Dienstleister)
+> Haben wir letzten Herbst in einer Kanzlei mit 14 Leuten eingeführt. Nach drei
+> Wochen klebte kein Zettel mehr am Monitor.
+
+**7 · Die Korrektur** (Fachmedium mit Grafik zu einer Studie)
+> Kleine Korrektur zur Grafik: Die 12 % beziehen sich laut Studie auf Betriebe
+> ab 50 Beschäftigten, nicht auf alle. Steht auf Seite 8.
+
+**8 · Anders lesen** (Branchenkollege: "Es gibt einfach keine Leute mehr")
+> Man kann das auch so lesen: Es fehlen Leute, die Dienstpläne mit drei Tagen
+> Vorlauf hinnehmen. Die anderen gibt es noch.
+
+**9 · Der Einzeiler** (Elektrogroßhändler zeigt ein neues Messgerät)
+> Endlich eins, das auch mit Handschuhen geht.
+
+## Regeln
+
+- **Ein bis drei Sätze.** Instagram-Kommentare werden in einer schmalen Spalte
+  unter einem Video gelesen. Ein Absatz wird hinter "mehr" eingeklappt, und
+  keiner tippt drauf.
+- **Nie anfangen mit** "Toller Beitrag", "Super Post", "Spannend!", "So wahr",
+  "Danke fürs Teilen", "Wichtiges Thema", "👏", "Genau das brauchte ich heute"
+  oder dem Vornamen mit Ausrufezeichen. Das liest niemand mehr.
+- **Keine reinen Emoji-Kommentare** und kein Emoji als erstes Zeichen.
+- **Nie das Reel nacherzählen.** Wer mitliest, hat es gerade gesehen.
+- **Eine Idee.** Ein Kommentar mit zwei Punkten wirkt, als wolle man den Thread
+  kapern.
+- **Das Konkrete sagen.** Könnte der Kommentar unter jedem Post zum Thema
+  stehen, ist er kein Kommentar, sondern Rauschen. Fachsprache der Branche
+  ("Objekt", "Revier", "Abnahme", "Los") schlägt Marketingdeutsch.
+- **Kein Pitch, nie.** Kein Angebot, kein Link, kein "Schauen Sie mal auf
+  unserer Seite vorbei", kein Firmenslogan als Signatur, keine Eigenwerbung.
+  So wird man am schnellsten von genau der Person blockiert, die man erreichen
+  wollte. Unter dem Post eines Kunden, Verbands oder Fachmediums sieht es
+  außerdem so aus, als nutze man deren Bühne für Werbung.
+- **Früh zählt hier mehr als irgendwo sonst.** Ein Kommentar aus der ersten
+  Stunde unter einem Reel, das danach Fahrt aufnimmt, wird mitgenommen.
+
+## Ausgabe
+
+Gib **zwei Varianten unterschiedlichen Typs**, beschriftet, plus eine Zeile,
+welche du posten würdest und warum. Schick beide vorher durch `/ig-human`:
+Kommentare sind kurz, ein Gedankenstrich oder eine Floskel fällt hier stärker
+auf als in einer Caption.
 
 ```
-COMMENT OPTIONS  (on @acct's reel about pricing)
+KOMMENTAR-OPTIONEN  (zum Reel von @acct über Preisanpassungen)
 
-[6 · Receipt]
-We raised ours 40% last March and lost exactly one client, who was the one
-taking up half the inbox. Took eight months to stop being scared of it.
+[6 · Aus der Praxis]
+Wir haben im März um 8 % angepasst, mit dem neuen Tarif als Begründung, und
+kein einziges Objekt verloren. Die Angst davor hat länger gedauert als die
+Gespräche.
 
-[3 · Respectful disagree]
-Agree on the anchoring. The part I would push back on is doing it mid-project.
-We tried that and it cost us a renewal that was otherwise fine.
+[3 · Respektvoll widersprechen]
+Bei der Begründung über den Tarif sind wir ganz bei Ihnen. Mitten in der
+Vertragslaufzeit würden wir es nicht mehr machen: Das hat uns letztes Jahr
+eine Verlängerung gekostet, die sonst sicher gewesen wäre.
 
-Post the first. It concedes something and it has a number in it.
+Empfehlung: die erste. Sie gibt etwas zu und hat eine Zahl drin.
 ```
 
-## Batch mode
+## Batch-Modus
 
-For an engagement round, ask for the 5 to 10 posts as pasted text in one
-message, return one comment each in a single block, and keep a running note in
-`~/.claude/instagram/log.md` of who has been commented on this week.
-Commenting on the same three accounts every day is visible and it looks like
-exactly what it is.
+Für die Engagement-Runde: Lass dir die 5 bis 10 Posts als Text in einer
+Nachricht geben, gib je einen Kommentar in einem einzigen Block zurück und
+führ in `~/.claude/instagram/log.md` mit, wer diese Woche schon einen Kommentar
+bekommen hat. Wer jeden Tag dieselben drei Konten kommentiert, fällt auf, und
+es sieht aus wie genau das, was es ist.
 
-## Never
+Misch die Runde: Kunden und Partner, Verbände und Fachmedien,
+Branchenkollegen, dazu ein, zwei Wunschkunden. Wunschkunden bekommen wochenlang
+nur Kommentare, bevor es überhaupt eine DM gibt (`/ig-dm`).
 
-Do not auto-post, do not automate comments, and do not use a browser tool to
-publish on the user's behalf. Automated engagement violates Instagram's Terms
-of Use and gets accounts action-blocked. This skill writes the comment. The
-user posts it.
+## Nie
+
+Nicht automatisch posten, keine Kommentare automatisieren, kein Browser-Tool,
+das im Namen des Nutzers veröffentlicht oder Feeds und Kommentarspalten
+ausliest. Automatisiertes Engagement verstößt gegen die Nutzungsbedingungen
+von Instagram und führt zu Aktionssperren. Dieser Skill schreibt den
+Kommentar. Der Nutzer postet ihn.

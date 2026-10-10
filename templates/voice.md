@@ -1,67 +1,81 @@
 # voice.md
 
-Copy this to `~/.claude/instagram/voice.md` and fill it in. Every skill in the
-pack reads it. Ten minutes here is the difference between scripts you shoot and
-scripts you rewrite.
+Kopier diese Datei nach `~/.claude/instagram/voice.md` und füll sie aus. Jeder
+Skill im Paket liest sie. Zehn Minuten hier sind der Unterschied zwischen
+Skripten, die du drehst, und Skripten, die du umschreibst.
 
-If you would rather not fill it in by hand, send Claude three of your own reels
-or captions and say "write my voice.md from these". That works better than
-guessing at the answers.
+Keine Lust, sie von Hand auszufüllen? Schick Claude drei eigene Reels oder
+Captions und sag "schreib meine voice.md daraus". Das funktioniert besser, als
+die Antworten zu raten.
 
-This file matters more on Instagram than anywhere else, because you have to say
-the words out loud. A line you would never say is not a draft, it is a retake.
+Auf Instagram zählt diese Datei mehr als anderswo, weil du die Worte laut
+sagen musst. Ein Satz, den du nie sagen würdest, ist kein Entwurf, sondern ein
+zweiter Take.
 
 ---
 
-## Who I am
+## Wer ich bin
 
 - **Name:**
 - **Handle:**
-- **What I do, in one sentence:**
-- **Who I am talking to:** (be specific: "photographers charging under $2,000",
-  not "creatives")
-- **What I sell:**
+- **Firma, Branche, Region:** (z.B. "Gebäudereinigung, 60 Mitarbeiter, Wien und Umgebung")
+- **Land:** (AT / DE / CH, für Wortwahl wie Jänner/Januar und rechtliche Hinweise)
+- **Was ich mache, in einem Satz:**
+- **Mit wem ich rede:** (konkret: "Hausverwaltungen mit 20+ Objekten in Wien",
+  nicht "Unternehmen")
+- **Wer am Ende entscheidet:** (Geschäftsführung, Objektleitung, Einkauf, HR)
+- **Was ich verkaufe:**
+- **Wie lange ein Abschluss typischerweise dauert:** (ein Gespräch / Wochen / Monate)
 
-## What I sound like
+## Wie ich klinge
 
-- **Three of my own reels or captions that sound most like me:** (paste them)
-- **On camera I am:** (fast and loud / dry / calm / funny / deadpan)
-- **Words I actually use:**
-- **Words I would never say out loud:**
-- **Do I swear:** (yes / mild / no)
-- **Emoji in captions:** (never / one, rarely / freely)
-- **Face on camera:** (always / sometimes / faceless)
-- **Voiceover or to-camera:**
-- **Pace:** (words per minute, if you have timed yourself reading a script.
-  `beats.py --wpm` uses this. Most people are between 150 and 200.)
+- **Anrede:** (du / Sie. Eins davon, für alles. Die Skills mischen nie.)
+- **Drei eigene Reels oder Captions, die am meisten nach mir klingen:** (einfügen)
+- **Vor der Kamera bin ich:** (schnell und laut / trocken / ruhig / witzig / sachlich)
+- **Wörter, die ich wirklich benutze:**
+- **Wörter, die ich nie sagen würde:**
+- **Fachwörter meiner Kunden:** (z.B. Objekt, Revier, Leistungsverzeichnis, KV)
+- **Dialekt oder Färbung:** (hochdeutsch / leicht österreichisch / ...)
+- **Emoji in Captions:** (nie / eins, selten / frei)
+- **Gesicht vor der Kamera:** (immer / manchmal / gesichtslos / Team statt ich)
+- **Voiceover oder in die Kamera:**
+- **Tempo:** (Silben pro Sekunde, wenn du dich gestoppt hast. Skript laut lesen,
+  Sekunden messen, `beats.py` zeigt die Silbenzahl, Silben durch Sekunden.
+  `beats.py --sps` nutzt den Wert. Die meisten liegen zwischen 4 und 5,5.)
 
-## My positions
+## Meine Positionen
 
-Three to five things I believe that some of my audience does not. These are
-where the good reels come from.
+Drei bis fünf Dinge, die ich glaube und ein Teil meiner Branche nicht. Daraus
+entstehen die guten Reels.
 
 1.
 2.
 3.
 
-## Off limits
+## Tabu
 
-- **Topics I do not post about:**
-- **Clients, numbers or names I cannot say publicly:**
-- **Claims I am not allowed to make:** (regulated industry, employer policy, NDA)
+- **Themen, über die ich nicht poste:**
+- **Kunden, Zahlen oder Namen, die ich nicht öffentlich nennen darf:**
+- **Aussagen, die ich nicht machen darf:** (regulierte Branche, Vertrag, NDA,
+  Wettbewerbsrecht)
+- **Was nie ins Bild darf:** (Kundenobjekte ohne Freigabe, Schließanlagen,
+  Gesichter von Mitarbeitern ohne Einwilligung)
 
-## Proof I can use
+## Belege, die ich verwenden darf
 
-Real numbers, outcomes and stories I am happy to put my name on. The skills will
-never invent one, so if this section is empty, every draft comes back with
-`{{your number}}` in it.
+Echte Zahlen, Ergebnisse und Geschichten, die ich mit meinem Namen vertrete.
+Bei Kundenergebnissen dazuschreiben, ob eine schriftliche Freigabe vorliegt.
+Die Skills erfinden nie etwas. Ist dieser Abschnitt leer, kommt jeder Entwurf
+mit `{{deine Zahl}}` bzw. `{{Ihre Zahl}}` zurück.
 
+- (Beleg) - (Freigabe: ja / nein / anonym)
 -
 -
--
 
-## The ask
+## Die Bitte
 
-- **My keyword CTA, if I use one:** (one word, sayable, no spaces)
-- **What the keyword sends them:**
-- **Where my link goes:**
+- **Mein Keyword-CTA, falls ich einen nutze:** (ein Wort, sagbar, ohne
+  Leerzeichen, ohne Umlaut)
+- **Was das Keyword verschickt:** (Checkliste, Vorlage, Rechner, Demo-Video)
+- **Wohin mein Link führt:** (eine Seite: Demo, Termin oder Anfrage)
+- **Impressum im Profil verlinkt:** (ja / nein)

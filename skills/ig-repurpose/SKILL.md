@@ -1,88 +1,120 @@
 ---
 name: ig-repurpose
 description: >-
-  Turn one long asset - a YouTube video, podcast, livestream, newsletter, blog
-  post or client call - into a week of reels and carousels. Use when the user
-  says "repurpose this", "turn this into reels", "I have a video/podcast/
-  transcript", "cut this up", or pastes something long and wants it on
-  Instagram.
+  Macht aus einem langen Inhalt eine Woche Reels und Karussells: Webinar,
+  Fachartikel, Newsletter, Podcast, Messevortrag, Kundenprojekt (mit
+  Freigabe), LinkedIn-Post, YouTube-Video oder Gesprächsnotiz. Verwenden, wenn
+  der Nutzer sagt "Video umwandeln", "mach daraus Reels", "recyceln", "ich
+  habe ein Webinar/einen Podcast/ein Transkript", "zerleg das", "aus dem
+  Vortrag Content machen", oder etwas Langes einfügt und es auf Instagram
+  haben will.
 ---
 
 # ig-repurpose
 
-One good long asset contains four to six posts. Most people extract one and
-throw the rest away.
+Ein guter langer Inhalt steckt voller Posts, meist vier bis sechs. Die meisten
+holen einen heraus und werfen den Rest weg.
 
-## Input
+## Eingabe
 
-A transcript, an article, a newsletter, a script, a call summary, a livestream.
-If the user gives a URL and this session has a transcript tool, use it;
-otherwise ask them to paste. Read the whole thing before extracting anything.
+Ein Transkript, ein Fachartikel, ein Newsletter, ein Skript, eine
+Gesprächsnotiz, die Aufzeichnung eines Webinars oder Messevortrags, ein
+LinkedIn-Post, der dort gut lief. Gibt der Nutzer eine URL und hat diese
+Sitzung ein Transkript-Werkzeug, nutz es; sonst lass ihn den Text einfügen.
+Lies alles, bevor du irgendetwas herausziehst.
 
-If the source is a video the user owns, ask for the file too. A Reel built on
-their own footage beats one built on their own words read again.
+Ist die Quelle ein Video des Nutzers, frag auch nach der Datei. Ein Reel aus
+seinem eigenen Material schlägt eines, in dem er seine eigenen Worte noch
+einmal vorliest.
 
-## Extract, do not summarise
+Zwei Prüfungen vor dem Start:
 
-A summary of a video is not a Reel. Nobody wants the summary. Go through the
-asset and pull out the things that stand alone:
+- **Kundenprojekt oder Kundenzitat:** Kundenname, Logo, Objekt und Zahlen nur
+  mit schriftlicher Freigabe. Ohne Freigabe anonymisieren: Branche, Größe,
+  Ergebnis ("Hausverwaltung, 40 Objekte in Graz, Reklamationen halbiert").
+  Frag nach, bevor du schreibst, nicht danach.
+- **Webinar oder Messevortrag mit Publikum:** Wer im Bild oder zu hören ist,
+  braucht eine Einwilligung. Fragen aus dem Publikum lieber nachsprechen als
+  den Ausschnitt zeigen.
 
-| pull | what it is |
+## Herausziehen, nicht zusammenfassen
+
+Eine Zusammenfassung eines Webinars ist kein Reel. Niemand will die
+Zusammenfassung. Geh den Inhalt durch und zieh heraus, was für sich allein
+steht:
+
+| Fundstück | was es ist |
 | --- | --- |
-| **Claims** | every sentence that would start an argument |
-| **Numbers** | every figure, cost, duration, percentage |
-| **Stories** | every moment with a person, a scene and a cost |
-| **Mechanisms** | every "the way this actually works is..." |
-| **Mistakes** | every admission of something that went wrong |
-| **Lines** | every sentence already quotable as-is |
+| **Thesen** | jeder Satz, über den jemand widersprechen würde |
+| **Zahlen** | jede Zahl, jeder Betrag, jede Dauer, jeder Prozentwert |
+| **Geschichten** | jeder Moment mit einer Person, einer Szene und einem Preis |
+| **Mechanismen** | jedes "so funktioniert das wirklich" |
+| **Fehler** | jedes Eingeständnis, dass etwas schiefging |
+| **Sätze** | jeder Satz, der so wie er ist zitierfähig ist |
 
-List what you found, with counts, before writing anything. If the asset yields
-fewer than four items, it is thin, and four posts squeezed out of it will be
-thin too. Say that.
+Ein B2B-Webinar ist meist voller Mechanismen und arm an Geschichten. Die
+besten Stellen stecken oft in der Fragerunde am Ende, weil dort die echten
+Einwände kommen. Lies sie nicht zuletzt.
 
-## Then pick the format per extract
+Liste auf, was du gefunden hast, mit Anzahl, bevor du irgendetwas schreibst.
+Ergibt der Inhalt weniger als vier Fundstücke, ist er dünn, und vier Posts
+daraus werden auch dünn. Sag das.
 
-Not everything is a Reel.
+## Dann das Format pro Fundstück wählen
 
-- **Claim, mistake, story** to a Reel. They need a voice and a face.
-- **Mechanism, numbered list** to a carousel. They need to be re-read.
-- **A quotable line** to a story frame, not a post.
+Nicht alles ist ein Reel.
 
-## Then build the week
+- **These, Fehler, Geschichte** werden ein Reel. Sie brauchen eine Stimme und
+  ein Gesicht.
+- **Mechanismus, nummerierte Liste** werden ein Karussell. Die will man noch
+  einmal lesen, und im B2B werden sie gespeichert und an Kollegen
+  weitergeleitet.
+- **Ein zitierfähiger Satz** wird ein Story-Frame, kein Post.
 
-Each extract becomes one post and each post stands completely on its own. The
-viewer has not seen the source and never will. Never write "as I said in my
-latest video". The post is the thing.
+Untertitel und Texteinblendungen sind bei jedem Reel Pflicht. Webinar-Material
+hat oft schlechten Ton, und viele schauen im Büro ohnehin ohne.
 
-Assign a hook formula from `ig-reel/hooks.json` to each and vary them. Five
-posts from one source with the same hook shape reads as a content mill, because
-it is one.
+## Dann die Woche bauen
 
-If the source is the user's own video, **use the actual footage**. The clip
-where they said the thing, with the real reaction in it, beats a re-record
-every time. Cut on the sentence, not on the breath.
+Jedes Fundstück wird ein Post, und jeder Post steht komplett für sich. Der
+Zuschauer hat die Quelle nicht gesehen und wird sie nie sehen. Schreib nie
+"wie ich im letzten Webinar gesagt habe". Der Post ist das Produkt.
 
-Order across the week so the strongest claim goes first, the story lands
-midweek, and the mechanism goes last, when the people who liked the earlier
-ones are watching for it.
+Ordne jedem Post eine Hook-Formel aus `ig-reel/hooks.json` zu und wechsle
+sie. Fünf Posts aus einer Quelle mit derselben Hook-Form wirken wie aus der
+Content-Fabrik, weil sie das sind.
 
-## Output
+Ist die Quelle ein Video des Nutzers, **nimm das echte Material**. Der
+Ausschnitt, in dem er den Satz gesagt hat, mit der echten Reaktion darin,
+schlägt jede Neuaufnahme. Schneide am Satz, nicht am Atem.
+
+Ist die Quelle ein LinkedIn-Post, übernimm nicht den Text. Ein LinkedIn-Post
+ist zum Lesen gebaut, ein Reel zum Sagen. Nimm die These und schreib sie neu.
+
+Ordne die Woche so: die stärkste These zuerst, die Geschichte zur Wochenmitte,
+der Mechanismus zuletzt, wenn die Leute, denen die ersten Posts gefallen
+haben, darauf warten.
+
+## Ausgabe
 
 ```
-SOURCE: "Why we killed discovery calls" (42 min podcast, 8,900 words)
+QUELLE: "Warum wir IT-Support nicht mehr nach Stunden abrechnen" (45-Min.-Webinar, 7.800 Wörter)
 
-FOUND  5 claims, 9 numbers, 3 stories, 4 mechanisms, 2 mistakes, 7 quotable lines
+GEFUNDEN  5 Thesen, 9 Zahlen, 3 Geschichten, 4 Mechanismen, 2 Fehler, 7 zitierfähige Sätze
 
-WEEK
-TUE  REEL      #2  Negative Command  Stop running discovery calls
-                                     use the 14:20 clip, he laughs at the end
-WED  CAROUSEL  Job B caption         The 4-question form that replaced the call
-FRI  REEL      #21 Mid-Sentence      "...and he asked for a refund nine days later"
-SUN  REEL      #5  Time Collapse     Six hours a week back, one deleted link
+WOCHE
+DI  REEL       #2  Klare Ansage       Kaufen Sie IT-Support nicht nach Stunden ein
+                                      Ausschnitt bei 14:20 nehmen, er lacht am Ende
+MI  KARUSSELL  Hook in der Caption    Die 4 Fragen, die das Erstgespräch ersetzt haben
+FR  REEL       #21 Mitten im Satz     "...und neun Tage nach der Abnahme wollte er Geld zurück"
+SO  REEL       #5  Zeitraffer         6 Stunden pro Woche zurück, ein Formular weniger
 
-Say "write Tuesday" and I will draft it.
+FREIGABE   Die Geschichte am FR nennt einen Kunden. Freigabe liegt nicht vor:
+           anonymisiert als "Steuerkanzlei, 25 Arbeitsplätze".
+
+Sag "schreib Dienstag", dann entwerfe ich ihn.
 ```
 
-Then draft on request, one at a time, each through `/ig-reel` and `/ig-human`.
-Do not dump four finished scripts at once. They will all sound the same and the
-user will shoot none of them.
+Entwirf dann auf Wunsch, einen nach dem anderen, jeweils über `/ig-reel` und
+`/ig-human`. Kipp nicht vier fertige Skripte auf einmal aus. Sie klingen dann
+alle gleich, und der Nutzer dreht keines davon.

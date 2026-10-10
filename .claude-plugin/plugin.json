@@ -1,13 +1,13 @@
 {
-  "name": "instagram-agent",
-  "description": "Thirteen Claude skills that run an Instagram account: Reels off 26 hook formulas with a scored hook and a timed beat sheet, a research skill that finds what is working in your niche and ranks it by outlier multiple, captions linted against the feed truncation, carousels, stories, profile score, weekly plan, comments, replies, DMs, repurposing, audits, and a humanizer that strips the AI fingerprint before anything ships.",
-  "version": "1.0.0",
+  "name": "instagram-agent-de",
+  "description": "Dreizehn Claude-Skills für Instagram im B2B, deutsch und für den DACH-Raum: Reels aus 26 Hook-Formeln mit bewertetem Hook und Beat-Sheet nach Silben, Recherche nach Outlier-Vielfachem, Captions mit Feed-Vorschau und du/Sie-Prüfung, Karussells, Stories, Profil-Score mit Impressum, Wochenplan, Kommentare, Antworten, DMs mit UWG-Grenze, Repurposing, Auswertung und ein Humanizer für KI-Deutsch und Werbedeutsch.",
+  "version": "1.0.0-de",
   "author": {
-    "name": "Jake Schincariol",
+    "name": "Jake Schincariol (Original), deutsche B2B-Fassung von Mladen Vukovic",
     "url": "https://opusjake.ai"
   },
   "homepage": "https://github.com/Jakeschincariol/instagram-agent-skill",
   "repository": "https://github.com/Jakeschincariol/instagram-agent-skill",
   "license": "MIT",
-  "keywords": ["instagram", "reels", "content", "writing", "humanizer", "social", "marketing"]
+  "keywords": ["instagram", "reels", "b2b", "deutsch", "dach", "humanizer", "social", "marketing"]
 }

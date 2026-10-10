@@ -1,118 +1,249 @@
 ---
 name: ig-dm
 description: >-
-  Write Instagram DMs that get replies - the keyword delivery, the first
-  message to someone who engaged, the collab pitch, and the two follow-ups. Use
-  when the user says "DM this person", "what do I send them", "outreach
-  message", "how do I follow up", "pitch this brand", or is reaching out to
-  someone specific.
+  Instagram-DMs schreiben, die Antworten bekommen: die Keyword-Auslieferung,
+  die erste Nachricht an jemanden, der interagiert hat, den Kooperations-Pitch
+  an Partner, Verbände und Fachmedien, und die zwei Follow-ups. Nutzen, wenn
+  der Nutzer sagt "DM schreiben", "schreib der Person", "was schick ich
+  denen", "Nachricht an", "Erstkontakt", "Akquise-Nachricht", "wie fasse ich
+  nach", "Follow-up", "Kooperation anfragen", "Collab anfragen", "Verband
+  anschreiben", "Fachmagazin anschreiben", oder jemand Bestimmten
+  anschreiben will.
 ---
 
 # ig-dm
 
-Instagram DMs are the only place on the platform where money actually changes
-hands, and they are also where most accounts burn the goodwill their content
-earned. The difference is entirely about who moved first.
+In den DMs wird auf Instagram Geschäft gemacht, und genau dort verspielen die
+meisten Konten das Vertrauen, das ihr Content aufgebaut hat. Der Unterschied
+liegt fast nur darin, wer sich zuerst gemeldet hat.
 
-## The three kinds of DM, and only three are worth writing
+Im B2B ist die DM selten der Abschluss, aber oft der Anfang: Aus ihr wird ein
+Telefonat, eine Begehung, ein Angebot.
 
-**1. The reply to a hand raised.** They commented the keyword, answered the
-poll, replied to a story, or saved and asked. They moved first. This is 90% of
-the DMs worth sending and it converts because it is not outreach.
+## Drei Arten von DMs, und nur diese drei lohnen sich
 
-**2. The warm approach.** Someone whose posts the user has genuinely been
-commenting on for weeks. There is a shared thread of conversation already.
+**1. Die Antwort auf eine gehobene Hand.** Die Person hat das Keyword
+kommentiert, bei der Umfrage abgestimmt, auf eine Story geantwortet oder nach
+etwas gefragt. Sie hat sich zuerst bewegt. Das sind 90 % der DMs, die sich
+lohnen, und sie funktionieren, weil sie keine Akquise sind.
 
-**3. The collab or brand pitch.** A specific proposal to a specific account,
-with a reason it is them.
+**2. Der warme Kontakt.** Jemand, unter dessen Posts der Nutzer seit Wochen
+ernsthaft kommentiert, oder den er auf einer Messe, einem Verbandstreffen,
+einer Baustelle kennengelernt hat. Es gibt schon einen gemeinsamen Faden.
 
-Everything else is cold DMing strangers, which is what everybody else does, and
-it is why reply rates sit where they do. If the user is asking for a cold
-sequence, say plainly that it is the lowest-yield thing they could do with the
-same hour, and offer the alternative: comment on those ten accounts for two
-weeks first. Then write it if they still want it.
+**3. Der Kooperations-Pitch.** Ein konkreter Vorschlag an ein konkretes Konto,
+mit einem Grund, warum genau dieses: ein Partnerbetrieb, ein Verband, ein
+Fachmedium.
 
-## Before writing, get the specifics
+Alles andere ist Kalt-Akquise bei Fremden. Das machen alle, deshalb sind die
+Antwortquoten, wie sie sind, und im DACH-Raum kommt das Recht dazu (nächster
+Abschnitt). Will der Nutzer eine Kaltsequenz, sag klar, dass das die
+schwächste Art ist, dieselbe Stunde zu verbringen, und biete die Alternative
+an: zwei Wochen lang unter den Posts dieser zehn Konten kommentieren
+(`/ig-comment`). Will er danach immer noch, schreib die erste Nachricht nach
+den Regeln unten: ohne Pitch, mit echtem Bezug.
 
-Ask in one batched question:
+## Die rechtliche Grenze
 
-1. **Who** - handle, what they do, and what they posted or did that started
-   this.
-2. **The trigger** - the actual reason to message today. A keyword they
-   commented, a story they replied to, a post they published. Not "they fit the
-   ICP".
-3. **What the user wants** - a conversation, a sale, a collab, a referral. Be
-   honest internally, even if the message does not lead with it.
+Werbende Nachrichten an Unbekannte ohne deren Einwilligung gelten in
+Deutschland (UWG) und Österreich (TKG) schnell als unzulässige Werbung, auch
+zwischen Unternehmen. Für diesen Skill heißt das:
 
-If there is no trigger, there is no message. Say so.
+- **Erste Nachricht ohne Pitch.** Kein Angebot, kein Preis, kein Link zur
+  Leistungsseite, kein Firmen-PDF.
+- **Mit echtem Bezug.** Ein Post, ein Kommentar, ein Vortrag, ein Gespräch,
+  das es wirklich gab.
+- **Das Angebot kommt erst, wenn gefragt wird.** "Was macht ihr eigentlich
+  genau?" oder "Was würde das bei uns kosten?" ist die Einladung. Vorher
+  nicht.
 
-## The keyword delivery
+Wer sich zuerst gemeldet hat (Keyword, Story-Antwort, Frage), bekommt, worum er
+gebeten hat. Das ist eine Einordnung für die Praxis, keine Rechtsberatung. Bei
+Serien-Akquise oder im Zweifel: Anwalt oder Kammer fragen.
 
-The most common DM in this pack and the easiest to ruin. They commented one
-word. They are expecting the thing. So:
+## Bevor du schreibst: die Einzelheiten
+
+Frag gebündelt in einer Nachricht:
+
+1. **Wer**: Handle, Firma, Rolle, und was die Person gepostet oder getan hat,
+   das den Anlass gibt.
+2. **Der Anlass**: der echte Grund, heute zu schreiben. Ein Keyword, das sie
+   kommentiert hat, eine Story-Antwort, ein Post von ihr, ein Gespräch auf der
+   Messe letzte Woche. Nicht "passt ins Zielkundenprofil".
+3. **Was der Nutzer will**: ein Gespräch, einen Termin, eine Begehung, eine
+   Kooperation, eine Empfehlung. Intern ehrlich, auch wenn die Nachricht nicht
+   damit anfängt.
+
+Ohne Anlass keine Nachricht. Sag das so.
+
+Nichts erfinden: Zahlen, Fälle und Kunden nur aus `~/.claude/instagram/voice.md`
+oder vom Nutzer, sonst `{{Ihre Zahl}}` bzw. `{{deine Zahl}}`. Die Beispiele in
+diesem Skill sind ausgedacht.
+
+## Anrede
+
+- **Erstkontakt: Sie.** Außer das Profil der Person duzt sichtbar (Bio,
+  Captions, Antworten unter den eigenen Posts) oder sie hat selbst zuerst
+  geduzt. Dann du.
+- **Keyword-Auslieferung:** die Anrede des Posts, unter dem kommentiert
+  wurde. Wer dort mit du eingeladen wurde, bekommt die Datei nicht plötzlich
+  per Sie.
+- **Verbände, Kammern, Fachmedien: Sie**, solange das Konto nicht selbst
+  duzt.
+- **Name bei Sie** nur, wenn er sicher ist ("Hallo Frau Berger"). Sonst
+  "Guten Tag" ohne Namen.
+- **Nie mischen**, auch nicht zwischen erster Nachricht und Follow-up. Wer
+  gesiezt wurde, wird weiter gesiezt, bis die Person das Du anbietet.
+
+## Die Keyword-Auslieferung
+
+Die häufigste DM in diesem Paket und die, die am leichtesten danebengeht. Die
+Person hat ein Wort kommentiert. Sie wartet auf die Sache. Also:
 
 ```
-{their name}, here it is: {the thing, or the link}.
+{Anrede und Name}, hier ist {die Checkliste / die Vorlage / der Rechner / das Demo-Video}: {Datei oder Link}
 
-{one line on how to use it}
+{eine Zeile, wie man es am besten nutzt}
 
-{one question they can answer in four words}
+{eine Frage, die sich in vier Wörtern beantworten lässt}
 ```
 
-Send the thing **first**, in message one, with no gate. A keyword post that
-delivers a "before I send it, can I ask what you do?" is a bait and switch and
-it is remembered. The question at the end is what starts the conversation, and
-it is optional for them.
+So sieht das aus (Gebäudereinigung, Keyword CHECKLISTE, Sie):
 
-Automated keyword replies are a supported feature for professional accounts,
-through Instagram's own tools or an approved partner. Using that is fine.
-Sending unsolicited bulk DMs is not, and it is the fastest route to a
-restricted account.
+```
+Hallo Frau Berger, hier ist die Checkliste: {Link}
 
-## The first message to someone warm
+Am meisten bringt Seite 2 mit den Sonderflächen. Die fehlen in fast jeder
+Ausschreibung und sorgen dann bei der Abnahme für Ärger.
 
-- **Two to four sentences.** A screen of text is a delete.
-- **Reference the specific thing.** The comment, the post, the reply. In their
-  words.
-- **Give before asking.** A number, a template, a name, an answer.
-- **One ask, small.** "Worth a quick call?" beats "let me walk you through the
-  platform".
-- **No link and no calendar in message one.** It reads as a funnel because it
-  is one.
-- **No voice note to a stranger.** It is a great tool and it is for people who
-  already know the user's voice.
+Wie viele Objekte schreiben Sie gerade aus?
+```
 
-## The collab pitch
+Schick die Sache **zuerst**, in Nachricht 1, ohne Schranke. Keine Gegenfrage
+davor ("Bevor ich es schicke: In welcher Branche sind Sie?"), keine
+E-Mail-Adresse als Gegenleistung, kein Formular. Das ist Lockvogeltaktik, und
+die merkt man sich. Die Frage am Ende startet das Gespräch, und ob die Person
+sie beantwortet, ist ihre Sache.
 
-Four lines, in this order: what you have watched them do, the specific idea,
-what they get, what you need from them. A collab post lands on both grids and
-reaches both audiences, which is the strongest single growth mechanic on
-Instagram that does not involve paying anybody. Pitch it as that and be
-concrete about who does what.
+Automatische Keyword-Antworten sind für professionelle Konten eine
+unterstützte Funktion, über Instagrams eigene Tools oder einen zugelassenen
+Partner. Das ist in Ordnung, mit einer klaren Grenze: Die Automatik antwortet
+nur, nachdem jemand zuerst kommentiert oder geschrieben hat, und sie schickt
+nur das, worum gebeten wurde, kein Angebot obendrauf. Unaufgeforderte
+Massen-DMs liegen auf der anderen Seite dieser Grenze. Sie verstoßen gegen die
+Nutzungsbedingungen, sind im DACH-Raum schnell unzulässige Werbung, und sie
+sind der schnellste Weg zu einem eingeschränkten Konto.
+
+## Die erste Nachricht an einen warmen Kontakt
+
+- **Zwei bis vier Sätze.** Ein Bildschirm voll Text wird gelöscht.
+- **Den konkreten Anlass nennen.** Den Kommentar, den Post, das Gespräch. Mit
+  den Worten der Person.
+- **Erst geben, dann fragen.** Eine Zahl, eine Vorlage, einen Kontakt, eine
+  Antwort.
+- **Eine Frage, klein, und kein Verkauf.** "Wie lösen Sie das bei den
+  Nachtschichten?" schlägt "Darf ich Ihnen kurz unsere Lösung zeigen?". Ein
+  Telefonat kommt, wenn das Gespräch läuft.
+- **Kein Link, kein Kalender, kein Firmen-PDF in Nachricht 1.** Das wirkt wie
+  ein Funnel, weil es einer ist.
+- **Keine Sprachnachricht an Fremde.** Gutes Werkzeug, aber für Leute, die die
+  Stimme des Nutzers schon kennen.
+
+So sieht das aus (IT-Dienstleister an die Geschäftsführerin einer
+Steuerkanzlei, nach Wochen mit Kommentaren unter ihren Posts):
+
+```
+Hallo Frau Huber, Ihr Post zum Homeoffice-Freitag in der Kanzlei hat bei uns
+intern eine Diskussion ausgelöst. Wir betreuen zwei Kanzleien in ähnlicher
+Größe, und dort hing es nie an der Technik. Der Engpass waren die
+Papierakten. Wie lösen Sie das bei Ihnen?
+```
+
+## Der Kooperations-Pitch
+
+Vier Zeilen, in dieser Reihenfolge: was der Nutzer bei ihnen beobachtet hat,
+die konkrete Idee, was sie davon haben, was er von ihnen braucht. Ein
+Collab-Post (in der App: "Mitwirkende einladen") erscheint in beiden Feeds und
+erreicht beide Zielgruppen. Das ist der stärkste Wachstumshebel auf Instagram,
+für den man niemanden bezahlt. Pitch es genau so, und sag konkret, wer was
+macht.
+
+Im B2B sind das vor allem:
+
+- **Partner**: Hersteller, Softwareanbieter, Großhändler, Betriebe aus dem
+  Nachbargewerk. Gemeinsamer Kunde, gemeinsames Projekt, gemeinsamer Ablauf.
+- **Verbände, Innungen, Kammern**: Mitgliederporträts, Ausbildung, wie
+  Betriebe neue Vorschriften praktisch umsetzen.
+- **Fachmedien**: ein Praxisfall mit echten Zahlen, eine Expertenstimme.
+  Fachmedien wollen Stoff. Wer ihnen im Pitch sein Angebot unterschiebt,
+  landet im Spam, nicht im Heft.
+
+Der Pitch bietet eine Zusammenarbeit an, nicht die eigene Leistung. Rutscht
+das Angebot hinein, ist es wieder eine werbende Kalt-Nachricht.
+
+So sieht das aus (Sicherheitsdienst an seinen Branchenverband):
+
+```
+Guten Tag Frau Aigner, Ihre Reihe "Betriebe im Porträt" verfolgen wir seit
+dem Frühjahr.
+
+Idee: ein gemeinsames Reel dazu, wie ein Betrieb mit 40 Leuten die Dienste
+über Weihnachten besetzt. Gedreht bei uns, 45 Sekunden.
+
+Für Sie: ein Mitgliederbeitrag aus der Praxis, ohne Aufwand beim Dreh.
+
+Von Ihnen bräuchten wir nur die Annahme der Mitwirkenden-Einladung und zwei
+Sätze zur Einordnung aus Verbandssicht.
+```
+
+Fließt Geld oder eine Gegenleistung (Ware, Rabatt, Provision), ist der
+gemeinsame Post Werbung und wird gekennzeichnet: "Werbung" bzw. "Anzeige" plus
+das Branded-Content-Tool von Instagram ("Bezahlte Partnerschaft"). Sprich das
+schon im Pitch an, dann ist es von Anfang an geklärt (keine Rechtsberatung).
 
 ## Follow-ups
 
-Two. That is the number.
+Zwei. Nicht drei.
 
-- **+4 days** - add something new. Never "just bumping this". If there is
-  nothing new, there is no follow-up.
-- **+10 days** - the close-the-loop message. Say you will stop, and mean it.
-  This one gets a surprising share of the total replies, because it removes the
-  pressure.
+- **+4 Tage**: etwas Neues mitbringen. Nie "Wollte nur kurz nachhaken". Gibt
+  es nichts Neues, gibt es kein Follow-up.
+- **+10 Tage**: die Nachricht, die den Faden schließt. Sag, dass danach nichts
+  mehr kommt, und halt dich dran. Auf diese Nachricht kommt ein überraschend
+  großer Teil aller Antworten, weil sie den Druck rausnimmt.
 
-Then stop. A third converts nobody and costs the relationship.
+Dann Schluss. Ein drittes überzeugt niemanden mehr und kostet die Beziehung.
+Hat sich die Person nie selbst gemeldet, bleiben auch die Follow-ups ohne
+Angebot.
 
-## Never
+```
++4 Tage
+Nachtrag zu den Papierakten: Eine der beiden Kanzleien scannt nur die
+Dauerakten, laufende Fälle bleiben auf Papier. Das hat dort etwa die Hälfte
+der Wege ins Büro gespart.
 
-- Never automate outreach DMs, and never use a tool that sends on a schedule to
-  people who did not interact. It violates Instagram's Terms of Use and
-  restricts the account.
-- Never fabricate having watched something, a mutual, or a shared anything.
-- Never open with "Hey! Quick question" and then not ask a question.
-- Never send the pitch in the same message as the compliment.
++10 Tage
+Ich lasse das Thema jetzt ruhen. Wenn Homeoffice bei Ihnen wieder auf den
+Tisch kommt, schreiben Sie einfach.
+```
 
-## Output
+## Nie
 
-The message, the character count, and the two follow-ups with the day each
-goes out, all run through `/ig-human`. The user sends every one of them by
-hand, or through their own approved automation for keyword replies only.
+- Nie Akquise-DMs automatisieren, und nie ein Tool nutzen, das nach Zeitplan
+  an Leute schreibt, die nicht interagiert haben. Das verstößt gegen die
+  Nutzungsbedingungen von Instagram, schränkt das Konto ein und ist im
+  DACH-Raum schnell unzulässige Werbung.
+- Nie erfinden, dass der Nutzer etwas gesehen hat, einen gemeinsamen Kontakt
+  oder sonst eine Gemeinsamkeit.
+- Nie mit "Hallo! Kurze Frage" anfangen und dann keine Frage stellen.
+- Nie den Pitch in dieselbe Nachricht packen wie das Kompliment.
+- Nie Kundennamen, Projekte oder Zahlen von Kunden ohne schriftliche Freigabe.
+  Branche, Größe und Ergebnis reichen.
+- Nie mit Höflichkeitsfloskeln einsteigen ("Ich hoffe, es geht Ihnen gut",
+  "Ich wollte mich kurz vorstellen"). Der erste Satz ist der Anlass.
+
+## Ausgabe
+
+Die Nachricht mit Anrede (du oder Sie) und Zeichenzahl, dazu die zwei
+Follow-ups mit dem Tag, an dem sie jeweils rausgehen, alles vorher durch
+`/ig-human`. Der Nutzer schickt jede Nachricht selbst, oder bei
+Keyword-Antworten über seine eigene, zugelassene Automatisierung.

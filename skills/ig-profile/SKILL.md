@@ -1,82 +1,126 @@
 ---
 name: ig-profile
 description: >-
-  Score an Instagram profile out of 100 against a 12-part rubric and rewrite
-  the parts that lose points - name field, bio, link, highlights, pinned three,
-  grid. Use when the user says "optimize my profile", "fix my bio", "score my
-  Instagram", "why don't people follow me", or pastes their profile and asks how
-  it reads.
+  Ein Instagram-Firmenprofil mit einer 13-teiligen Rubrik auf 100 Punkte
+  bewerten und die Teile umschreiben, die Punkte kosten: Impressum,
+  Namensfeld, Bio, Link, Highlights, die drei angepinnten Beiträge, Grid.
+  Nutzen, wenn der Nutzer sagt "Profil checken", "Profil optimieren", "bewerte
+  mein Profil", "Bio verbessern", "Bio umschreiben", "was soll in die Bio",
+  "Namensfeld", "Highlights benennen", "Impressum auf Instagram", "warum folgt
+  mir keiner", "warum fragt keiner an", oder sein Profil einfügt und fragt, wie
+  es wirkt.
 ---
 
 # ig-profile
 
-Almost everybody optimises the wrong thing here. The profile is not a
-storefront people browse. It is a **decision screen**, arrived at from one
-reel, and it gets about three seconds to answer one question: is there more of
-that here, and is it for me.
+Fast alle optimieren hier das Falsche. Das Profil ist kein Schaufenster, durch
+das jemand bummelt. Es ist ein **Entscheidungsbildschirm**. Jemand kommt über
+ein einziges Reel und gibt dem Profil etwa drei Sekunden für eine Frage: Gibt
+es hier mehr davon, und ist das für mich?
 
-## Input
+Im B2B heißt "für mich": für meinen Betrieb, meine Branche, meine Region. Ein
+Geschäftsführer, der das in drei Sekunden nicht sieht, fragt nicht an.
 
-Ask the user to paste or screenshot: the name field, the handle, the bio, what
-the link points to, the highlight names, what is pinned, and the first nine
-grid covers. A screenshot of the top of the profile plus the first two grid
-rows is enough for a first pass.
+## Eingabe
 
-Do not log into Instagram on their behalf.
+Bitte den Nutzer, einzufügen oder als Screenshot zu schicken: Namensfeld,
+Handle, Bio, wohin der Link führt, die Namen der Highlights, was angepinnt ist,
+und die ersten neun Cover im Grid. Frag dazu, wo das Impressum steht, und ob
+das Unternehmen seinen Sitz in Deutschland, Österreich oder der Schweiz hat,
+falls `~/.claude/instagram/voice.md` das nicht verrät. Ein Screenshot vom
+oberen Profilteil plus die ersten zwei Grid-Reihen reicht für den ersten
+Durchgang.
 
-## Score it
+Logg dich nicht für den Nutzer bei Instagram ein. Auch nicht, wenn er darum
+bittet.
 
-Read `rubric.json` in this folder. Twelve items, 100 points, each with what
-full marks looks like and how it usually fails. Score every item, show the
-table, give the total. Be honest. Most profiles land in the 30s and 40s on the
-first pass and a generous score is useless.
+## Bewerten
+
+Lies `rubric.json` in diesem Ordner. Dreizehn Kriterien, 100 Punkte, zu jedem
+steht, wie volle Punkte aussehen und woran es meistens scheitert. Bewerte jedes
+Kriterium, zeig die Tabelle, nenn die Summe. Sei ehrlich. Die meisten
+Firmenprofile landen beim ersten Durchgang in den 30ern und 40ern, und ein
+großzügiger Score ist wertlos.
+
+`impressum` ist als Pflichtpunkt markiert (`"required": true`). Kennzeichne es
+in der Tabelle mit PFLICHT, sobald es nicht volle Punkte hat.
 
 ```
-PROFILE SCORE  38/100
+PROFIL-SCORE  38/100
 
-  name field       2/12   name only, no words anyone searches
-  bio first line   3/12   three nouns and a coffee emoji
-  pinned three     0/10   nothing pinned
-  highlights       2/8    "Random", "Life", "2023"
-  grid legibility  4/8    six of nine covers are a face mid-sentence
+  Impressum         0/6    PFLICHT. Bio-Link führt auf einen Linkbaum, kein Impressum
+  Namensfeld        2/12   nur "Novak Facility GmbH", kein Wort, das jemand sucht
+  Bio Zeile 1       3/12   "Ihr Partner für Sauberkeit" und ein Glitzer-Emoji
+  Angepinnt         0/10   nichts angepinnt
+  Highlights        2/8    "Allgemein", "Weihnachtsfeier", "2023"
+  Grid              4/7    sechs von neun Covern ohne Text
   ...
 ```
 
-## Then rewrite, in this order
+## Dann umschreiben, in dieser Reihenfolge
 
-Fix in descending order of points lost. Do not rewrite everything at once, the
-user has to actually go and change each of these.
+Rechtliche Pflicht zuerst: Fehlt das Impressum oder ist es nicht erreichbar,
+steht es auf Platz 1, auch wenn anderswo mehr Punkte verloren gehen. Danach
+absteigend nach verlorenen Punkten. Schreib nicht alles auf einmal um, der
+Nutzer muss jedes Feld selbst ändern.
 
-**1. The name field (30 characters).** The bold line under the photo, not the
-handle. This is the field Instagram search matches against, and most accounts
-put a name in it and nothing else. Format that works:
-`{Name} | {what you do, in searched words}`. Give three options.
+Alle Texte in der Anrede aus `voice.md`. Fehlt sie, frag einmal; ohne Antwort
+Sie. Die Bio ist die Stelle, an der du und Sie am häufigsten gemischt werden.
 
-**2. Bio line one.** Who this is for and what changes. Not a job title, not
-adjectives, not a pipe-separated list of identities. The rest of the 150
-characters carries one piece of proof or one plain offer.
+Erfinde keinen Proof. Steht in `voice.md` keine Zahl, schreib `{{Ihre Zahl}}`
+bzw. `{{deine Zahl}}`. Kundennamen und Logos nur mit schriftlicher Freigabe,
+sonst Branche, Größe, Ergebnis.
 
-**3. The pinned three.** Three slots, three different jobs: the best proof, the
-clearest explanation of the offer, the best introduction to the person. This is
-the highest-leverage fix on the whole profile and it takes four taps. An
-unpinned grid shows whatever was posted last, which is a coin flip.
+**1. Impressum (Pflicht).** Erreichbar mit höchstens zwei Klicks: Der Bio-Link
+führt auf eine Seite mit "Impressum" im Footer, oder ein eigener Link heißt
+genau so. Rechtsgrundlage nach Sitz: DE § 5 DDG, AT § 5 ECG und § 25 MedienG
+(Offenlegung), CH weniger streng, Anbieterangaben trotzdem empfohlen. Schreib
+keinen Impressumstext. Sag, wo es hingehört und welche Grundlage gilt, und dass
+das keine Rechtsberatung ist; den Inhalt klärt der Nutzer mit Kammer, Verband
+oder Anwalt.
 
-**4. Highlights.** Four to six, named for the questions a buyer asks: Pricing,
-Results, How it works, About. Not "Random". Delete the rest.
+**2. Das Namensfeld (30 Zeichen).** Die fette Zeile unter dem Foto, nicht der
+Handle. Dieses Feld wertet die Instagram-Suche aus, und die meisten Firmenkonten
+tragen dort nur den Firmennamen ein, gern mit Rechtsform. Format, das
+funktioniert: `{Firma oder Person} | {Leistung, ggf. Region, in Suchbegriffen}`,
+etwa "Novak | Gebäudereinigung Wien". Gib drei Optionen und zähl die Zeichen.
 
-**5. The link.** One destination that matches what the bio just promised. Five
-are allowed; two is already a menu and a menu converts worse than a door.
+**3. Bio Zeile 1.** Für wen, und welches Ergebnis die bekommen. Keine
+Berufsbezeichnung, keine Adjektive, keine Strich-Liste. "Dienstpläne für
+Sicherheitsfirmen, die nicht mehr per WhatsApp laufen." Der Rest der 150
+Zeichen trägt einen Proof (Kunden, Jahre, Branchen) oder ein konkretes Angebot
+("Objekt-Check vor Ort, 30 Minuten").
 
-**6. Grid covers.** The first nine at thumbnail size. Reel covers get chosen,
-not left as whatever frame one was. Four words of text on a cover makes a grid
-readable in one glance.
+**4. Die drei angepinnten.** Drei Plätze, drei Aufgaben: der stärkste Proof
+(ein Projekt, ein Kundenergebnis), die klarste Erklärung des Angebots (was, für
+wen, wie läuft es ab), die beste Vorstellung der Menschen dahinter. Das ist der
+wirksamste Fix im ganzen Profil, und er dauert vier Tipps. Ein Grid ohne
+Angepinntes zeigt, was zuletzt gepostet wurde, und das ist Glückssache.
+Stellenanzeigen gehören ins Highlight "Jobs", nicht hierher, außer Recruiting
+ist gerade das Hauptziel.
 
-## Output
+**5. Highlights.** Vier bis sechs, benannt nach den Fragen, die Käufer stellen:
+Leistungen, Referenzen, Ablauf, Preise/FAQ, Team, Jobs. Nicht "Allgemein". Der
+Rest wird gelöscht.
 
-Score table, then the rewrites as copy-ready blocks in fix-first order, each
-run through `/ig-human`. Re-score at the end and show the delta honestly. If
-the rewrite reaches 84 and not 98, say 84, and say what the rest needs, which
-is usually a grid, a story habit and a pinned post that does not exist yet.
-None of that is a rewrite.
+**6. Der Link.** Eine Zielseite, die hält, was die Bio verspricht: Demo buchen,
+Termin vereinbaren, Anfrage stellen. Fünf Links sind erlaubt; zwei sind schon
+ein Menü, und ein Menü konvertiert schlechter als eine Tür. Die Startseite der
+Website ist keine Zielseite. Ein zweiter Link, der nur "Impressum" heißt, ist
+in Ordnung.
 
-Nothing is saved to Instagram by this skill. The user edits each field.
+**7. Grid-Cover.** Die ersten neun in Thumbnail-Größe. Reel-Cover werden
+ausgewählt, nicht als erstes Frame belassen. Vier Wörter Text auf einem Cover
+machen ein Grid auf einen Blick lesbar.
+
+## Ausgabe
+
+Die Score-Tabelle, dann die Umschreibungen als kopierfertige Blöcke in
+Fix-Reihenfolge, jeder durch `/ig-human`. Am Ende neu bewerten und den
+Unterschied ehrlich zeigen. Landet die Überarbeitung bei 84 und nicht bei 98,
+sag 84, und sag, was der Rest braucht: meist ein Grid, eine Story-Routine und
+einen angepinnten Beitrag, den es noch nicht gibt, oft ein freigegebenes
+Referenzprojekt. Nichts davon ist eine Umschreibung.
+
+Dieser Skill speichert nichts auf Instagram. Der Nutzer ändert jedes Feld
+selbst.

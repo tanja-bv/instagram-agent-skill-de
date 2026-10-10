@@ -1,100 +1,140 @@
 ---
 name: ig-plan
 description: >-
-  Build the week on Instagram - what to post, which format, when, and who to
-  engage with. Use when the user says "plan my week", "what should I post",
-  "content calendar", "I have nothing to post about", or wants a posting
-  schedule and an engagement list.
+  Plant die Instagram-Woche: was gepostet wird, in welchem Format, wann, und
+  mit welchen Konten (Kunden, Partner, Verbände, Fachmedien) interagiert wird.
+  Für B2B im DACH-Raum, mit Posting-Zeiten für Entscheider und optionalem
+  Recruiting-Slot. Verwenden, wenn der Nutzer sagt "Wochenplan", "plan meine
+  Woche", "was soll ich posten", "Redaktionsplan", "Content-Kalender", "mir
+  fällt nichts zum Posten ein", oder einen Posting-Plan und eine
+  Engagement-Liste will.
 ---
 
 # ig-plan
 
-The control room. Everything else in this pack executes; this decides what gets
-executed. Run it once a week, on the same day.
+Die Schaltzentrale. Alles andere in diesem Paket führt aus, dieser Skill
+entscheidet, was ausgeführt wird. Einmal pro Woche laufen lassen, immer am
+selben Tag.
 
-## Input
+## Eingabe
 
-If `~/.claude/instagram/voice.md`, `swipe.md` and `log.md` exist, read them.
-The swipe file is the user's own evidence from `/ig-viral` about which formulas
-are landing in their niche right now, and it outranks anything in this file.
-The log stops the plan repeating a theme from the last fortnight.
+Wenn `~/.claude/instagram/voice.md`, `swipe.md` und `log.md` existieren, lies
+sie. Das Swipe-File ist der eigene Beleg des Nutzers aus `/ig-viral` dafür,
+welche Formeln in seiner Branche gerade ankommen, und es sticht alles in
+dieser Datei. Das Log verhindert, dass der Plan ein Thema aus den letzten zwei
+Wochen wiederholt.
 
-If they do not exist, ask for four things and write them down:
+Wenn sie nicht existieren, frag nach vier Dingen und schreib sie auf:
 
-1. What the user sells, and to whom.
-2. The three or four themes they want to be known for.
-3. What actually happened this week: a client call, a number, a mistake, a
-   thing they built, an argument they had. This is where posts come from.
-4. Ten accounts worth being visible to.
+1. Was der Nutzer verkauft, und an wen (Branche, Betriebsgröße, Funktion:
+   Inhaber, Objektleitung, HR, Einkauf).
+2. Die drei oder vier Themen, für die er bekannt sein will.
+3. Was diese Woche tatsächlich passiert ist: ein Kundentermin, eine Zahl, ein
+   Fehler, eine Abnahme, eine gewonnene oder verlorene Ausschreibung, eine
+   Diskussion im Team. Daraus entstehen Posts.
+4. Zehn Konten, bei denen er sichtbar sein will: Kunden, Partner, Verbände,
+   Fachmedien.
 
-## What to post
+Frag nebenbei, ob gerade Stellen offen sind. Das entscheidet über den
+Recruiting-Slot.
 
-Four to five posts a week, and at least three of them Reels. Reels are the only
-format on Instagram that reliably reaches people who do not follow the account.
-Carousels go deep with the people who already do. Stories are daily and are
-planned separately.
+## Was gepostet wird
 
-Mix across the week, never two of the same type back to back:
+Vier bis fünf Posts pro Woche, davon mindestens drei Reels. Reels sind das
+einzige Format auf Instagram, das zuverlässig Leute erreicht, die dem Konto
+nicht folgen. Karussells gehen in die Tiefe bei denen, die schon folgen, und
+werden im B2B gern gespeichert und weitergeleitet. Stories laufen täglich und
+werden separat geplant.
 
-| type | share | job |
+Über die Woche mischen, nie zweimal derselbe Typ hintereinander:
+
+| Typ | Anteil | Aufgabe |
 | --- | --- | --- |
-| **Proof** | 1 per week | something that happened, with a number. Reel. |
-| **Teach** | 1 to 2 per week | one thing the viewer can do today. Reel or carousel. |
-| **Opinion** | 1 per week | a position that could lose you followers. Reel. |
-| **Story** | 1 per fortnight | a scene with a cost. Reel. |
-| **Offer** | 1 per fortnight | what you sell, said plainly, no apology. Carousel or stories. |
+| **Beleg** | 1 pro Woche | etwas, das passiert ist, mit einer Zahl. Reel. Kundenbezug nur mit Freigabe, sonst anonymisiert (Branche, Größe, Ergebnis). |
+| **Wissen** | 1 bis 2 pro Woche | eine Sache, die der Zuschauer heute umsetzen kann. Reel oder Karussell. |
+| **Meinung** | 1 pro Woche | eine Position, die Follower kosten könnte. Reel. |
+| **Geschichte** | 1 alle zwei Wochen | eine Szene mit einem Preis. Reel. |
+| **Angebot** | 1 alle zwei Wochen | was der Nutzer verkauft, klar gesagt, ohne Entschuldigung. Karussell oder Stories. |
+| **Recruiting** | optional, höchstens 1 pro Woche | nur bei offener Stelle: echter Arbeitsalltag statt Stellenanzeige. Ersetzt Geschichte oder Angebot, nie einen Beleg. |
 
-For each slot give: the theme, the specific angle from what actually happened
-this week, the format, and the hook formula number from `ig-reel/hooks.json`.
-Not a topic, an angle. "AI" is not a plan. "The proposal we lost because the
-draft had an em dash in it" is a Reel.
+Recruiting läuft im B2B oft über denselben Kanal, darf ihn aber nicht
+übernehmen. Ein Konto, das drei Wochen nur Stellen postet, sehen Kunden als
+Betrieb, der seine Leute nicht hält. Mitarbeiter im Bild nur mit Einwilligung.
 
-## When to post
+Gib für jeden Slot an: das Thema, den konkreten Blickwinkel aus dem, was diese
+Woche passiert ist, das Format und die Nummer der Hook-Formel aus
+`ig-reel/hooks.json`. Kein Thema, ein Blickwinkel. "Sicherheit" ist kein Plan.
+"Der Revierfahrer, der um 03:10 die Tür offen fand, die laut Protokoll zu war"
+ist ein Reel.
 
-Post when the user's audience is awake and not at work. For most consumer
-audiences that is early evening local time; for a business audience, early
-morning.
+## Wann gepostet wird
 
-But say this plainly: **the hour matters far less than the first two seconds.**
-Instagram will keep showing a Reel for days if it performs, and will bury a
-well-timed one that does not. If the user is optimising posting times before
-their hooks work, they are polishing the wrong thing, and you should say so.
+Poste, wenn das Publikum aufs Handy schaut und nicht gerade arbeitet. Für
+Entscheider in KMU gilt als **Startannahme**:
 
-Anchor times to the audience's timezone, not the user's, if those differ.
+- DI–DO, 07:00–08:00 (vor dem ersten Termin), 12:00 (Mittagspause) und
+  19:00–20:30 (nach Feierabend), MEZ bzw. MESZ.
+- Montagvormittag und Freitagnachmittag eher schwach.
+- Recruiting-Posts zielen auf Bewerber: abends und am Wochenende.
+- Branchen mit Schichtbetrieb ticken anders. Eine Objektleitung in der
+  Gebäudereinigung ist um 06:00 schon unterwegs, eine Bauleitung auch.
 
-## The engagement round, which is not optional
+Das ist eine Annahme zum Starten, keine Regel. Sobald das Konto genug Follower
+hat, stehen in den Insights bei den Follower-Daten die aktivsten Zeiten. Die
+schlagen jede Tabelle, auch diese.
 
-20 minutes a day, before posting, not after. Build a list of 10:
+Und sag es deutlich: **Die Uhrzeit zählt viel weniger als die ersten zwei
+Sekunden.** Instagram zeigt ein Reel tagelang weiter, wenn es gut läuft, und
+begräbt ein perfekt getimtes, das nicht läuft. Optimiert der Nutzer
+Posting-Zeiten, bevor seine Hooks funktionieren, poliert er das Falsche, und
+das sollst du ihm sagen.
 
-- **5 reach** - accounts with an audience the user wants, where a good comment
-  gets seen. Comment early, before the thread is 200 deep.
-- **3 peers** - same size, same field. This is the group that reciprocates.
-- **2 buyers** - people who could actually buy. Comment for weeks before any
-  DM, and never pitch in a comment.
+Richte die Zeiten nach der Zeitzone des Publikums, nicht nach der des
+Nutzers. Im DACH-Raum ist das dieselbe; wichtig wird es erst bei Kunden
+außerhalb.
 
-Hand the list to `/ig-comment`.
+## Die Engagement-Runde, und die ist Pflicht
 
-## Output
+20 Minuten am Tag, vor dem Posten, nicht danach. Stell eine Liste mit 10
+Konten zusammen. Keine Influencer, sondern die Konten, bei denen die
+Zielgruppe ohnehin mitliest:
+
+- **4 Reichweite**: Verbände, Innungen, Kammern, Fachmedien, Messen. Konten,
+  deren Publikum die Zielgruppe des Nutzers ist und wo ein guter Kommentar
+  gesehen wird. Früh kommentieren, bevor der Thread 200 Kommentare lang ist.
+- **3 Partner**: Partner, Lieferanten, Nachbarbranchen, ähnliche Größe. Das
+  ist die Gruppe, die zurückkommentiert.
+- **3 Kunden**: Bestandskunden und Wunschkunden, also Leute, die tatsächlich
+  kaufen könnten. Wochenlang kommentieren, bevor eine DM kommt, und nie im
+  Kommentar pitchen. Die erste DM enthält kein Angebot (siehe `/ig-dm`).
+  Support-Themen von Bestandskunden nie öffentlich in Kommentaren klären.
+
+Gib die Liste an `/ig-comment` weiter.
+
+## Ausgabe
 
 ```
-WEEK OF SEP 15
+WOCHE AB 15.09.
 
-MON  engage only  (20 min, list below)
-TUE  7:30pm  REEL      PROOF    #5  Time Collapse   - 5hr proposal to 20 min
-WED  stories only + engage
-THU  7:00pm  CAROUSEL  TEACH    Job B caption       - the 4-slide clause breakdown
-FRI  7:30pm  REEL      OPINION  #2  Negative Command - stop doing discovery calls
-SAT  -
-SUN  6:00pm  REEL      STORY    #21 Mid-Sentence    - the refund email
+MO  nur Engagement  (20 Min., Liste unten)
+DI  07:30  REEL       BELEG       #5  Zeitraffer           Dienstplan für 60 Wachleute: 5 Std. auf 20 Min.
+MI  19:30  REEL       MEINUNG     #2  Klare Ansage         Schreiben Sie Bewachung nicht nach Stundensatz aus
+DO  12:00  KARUSSELL  WISSEN      Hook in der Caption      die 4 Punkte, die in jede Dienstanweisung gehören
+FR  nur Stories + Engagement
+SA  -
+SO  19:30  REEL       GESCHICHTE  #21 Mitten im Satz       "...und um 02:00 stand der Kunde selbst vor dem Tor"
 
-STORIES  every day, 3 to 5 frames, question box on Thursday.
+STORIES     jeden Tag, 3 bis 5 Frames, Fragen-Sticker am Donnerstag.
+RECRUITING  Stelle Revierfahrer offen: SO wahlweise als Recruiting-Reel
+            (#18 Kaltstart-Demo, eine Nachtschicht im Revier in 30 Sekunden).
+ZEITEN      Startannahme, nach vier Wochen mit den Insights abgleichen.
 
-ENGAGE  (5 reach / 3 peers / 2 buyers)
+ENGAGEMENT  (4 Reichweite / 3 Partner / 3 Kunden)
   ...
 
-Say "write Tuesday" and I will draft it.
+Sag "schreib Dienstag", dann entwerfe ich ihn.
 ```
 
-Write the plan to `~/.claude/instagram/plan.md` so the other skills can read
-it. Nothing is scheduled or posted anywhere. This is a plan and the user runs
-it.
+Schreib den Plan nach `~/.claude/instagram/plan.md`, damit die anderen Skills
+ihn lesen können. Nichts wird irgendwo eingeplant oder gepostet. Das ist ein
+Plan, und der Nutzer setzt ihn um.
